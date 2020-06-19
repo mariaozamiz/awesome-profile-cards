@@ -1,39 +1,77 @@
 <section class="fill">
   <div class="fill__section">
-    <img class="fill__section--img" />
+    <img class="fill__section--img" src="./assets/images/icon-adalab.png" />
     <h2 class="fill__section--title">RELLENA</h2>
+    <button class="fill__section--button" data-toggle="collapse"></button>
   </div>
   <div class="form">
     <form>
       <fieldset>
         <div class="form__name">
           <label for="name">Nombre completo</label>
-          <input type="text" id="name" name="name" />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Ej: Chandler Bing"
+          />
         </div>
         <div class="form__job">
           <label for="job">Puesto</label>
-          <input type="text" id="job" name="jobPosition" />
-        </div>
-        <div>
-          <label for="img">Imagen de perfil</label>
-          <input class="form__button" type="submit" value="Añadir imagen" />
           <input
-            id="imgOption"
-            type="checkbox"
-            value="fillImg"
-            name="imgOptions"
+            type="text"
+            id="job"
+            name="jobPosition"
+            placeholder="Ej: Front-end developer"
           />
+        </div>
+        <div class="form__img">
+          <label for="img">Imagen de perfil</label>
+          <div class="form__img--box">
+            <button class="form__img--box--button" type="button">
+              Añadir imagen
+            </button>
+            <input
+              class="form__img--box--check"
+              id="imgOption"
+              type="checklist"
+              name="imgOptions"
+            />
+          </div>
         </div>
       </fieldset>
       <fieldset>
-        <label for="name">Email</label>
-        <input type="text" id="name" name="name" />
-        <label for="phone">Teléfono</label>
-        <input type="text" id="surnames" name="surnames" />
-        <label for="phone">Linkedin</label>
-        <input type="tel" id="phone" name="phone" />
-        <label for="phone">Github</label>
-        <input type="tel" id="phone" name="phone" />
+        <div class="form__email">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Ej: chandler@friends.com"
+          />
+        </div>
+        <div class="form__phone">
+          <label for="phone">Teléfono</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Ej: 555 2587695"
+          />
+        </div>
+        <div class="form__linkedin">
+          <label for="Linkedin">Linkedin</label>
+          <input
+            type="text"
+            id="#"
+            name="#"
+            placeholder="Ej: linkedin.com/Bing"
+          />
+        </div>
+        <div class="form__github">
+          <label for="github">Github</label>
+          <input type="text" id="#" name="#" placeholder="Ej:@chandlerbing" />
+        </div>
       </fieldset>
     </form>
   </div>
