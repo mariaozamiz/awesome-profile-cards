@@ -1,19 +1,26 @@
 .fill {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.125em;
+  color: $color-dark-green;
   padding: 20px;
 
   &__section {
     display: flex;
     padding-left: 10px;
+    padding-top: 20px;
+    border-top: 1px solid $color-grey-light;
+
+    &--title {
+      font-size: 1.125em;
+    }
 
     &--img {
       margin-right: 10px;
       width: 30px;
     }
+
     &--button {
       height: 20px;
-      width: 20px;
+      width: 40px;
       margin-left: 160px;
       align-self: center;
     }
@@ -22,6 +29,8 @@
 
 .form {
   font-size: 0.875em;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $color-grey-light;
 
   &__name {
     display: flex;
@@ -49,12 +58,12 @@
       color: white;
       border-radius: 5px;
       border-style: none;
-      background-color: #e17334;
+      background-color: $orange;
     }
     &--box--check {
       height: 30px;
       width: 30px;
-      border: 0.5px solid #a2deaf;
+      border: 0.5px solid $green-light;
     }
   }
 
@@ -79,7 +88,7 @@
     padding-top: 20px;
   }
   input {
-    border: 0.5px solid #a2deaf;
+    border: 0.5px solid $green-light;
     height: 30px;
     margin-top: 7px;
   }
