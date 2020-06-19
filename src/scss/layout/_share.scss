@@ -1,0 +1,28 @@
+.form__button--active {
+    width: 199px;
+    height: 50px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 12px;
+    margin: 0px 60px 15px 61px;
+
+    /*ACTIVE*/
+    background-color: $orange;
+    color: $white;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+
+    /*INACTIVE*/
+    // background-color: #d5d5d5;
+    // box-shadow: none;
+}
+
+.share__button {
+    width: 118px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    margin: 10px 104px 30px 114px;
+    background-color: $azure;
+    color: $white;
+    box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.32);
+}
