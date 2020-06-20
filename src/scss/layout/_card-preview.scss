@@ -1,0 +1,44 @@
+.cardPreview {
+  display: flex;
+  flex-direction: column;
+  height: 457px;
+  background-color: $pale-grey;
+  padding: 38px 45px 40px 45px;
+
+  &__clearButton {
+    height: 30px;
+    width: 75px;
+    background-color: transparent;
+    border-radius: 15px;
+    font-family: $font-start-main;
+    border: solid $white 1px;
+    font-size: 12px;
+    text-align: center;
+    outline: inherit;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  &__card {
+    height: 329px;
+    width: 240px;
+    background-color: $white;
+    font-family: Montserrat;
+    padding-top: 21px;
+  }
+
+  &__name {
+    font-size: 18px;
+    color: $color-dark-green;
+  }
+
+  &__position {
+    font-size: 16px;
+    color: $color-font-grey;
+  }
+
+  &__profileImage {
+    height: 200px;
+    background-color: grey;
+  }
+}
