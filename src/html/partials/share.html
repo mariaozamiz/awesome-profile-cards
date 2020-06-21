@@ -1,15 +1,23 @@
-<!-- unactive TAB -->
-<div class="form__tab">
-    <div class="tab__image"></div>
-    <span class="tab__text">comparte</span>
-    <div class="tab__arrow"></div>
-</div>
+<!-- closed TAB -->
+<article class="share wrapper">
+    <div class="share__tab">
+        <div class="share__tab--description">
+            <i class="fas fa-share-alt tab__image"></i>
+            <h2 class="tab__text">comparte</h2>
+        </div>
+        <i class="fas fa-chevron-down tab__icon"></i>
+    </div>
+    <!-- opened TAB -->
+    <button class="form__button form__button--active">
+        <i class="far fa-address-card"></i>crear tarjeta
+    </button>
+</article>
+<!--opened TAB + action button -->
 
-<!-- selected TAB
-<button class="form__button--active">crear tarjeta</button>
-<hr class="line" />
-
-
-<p>La tarjeta ha sido creada:</p>
-<p class="url__generated"></p>
-<button class="share__button">Compartir en twitter</button> -->
+<article class="notification wrapper">
+    <p>La tarjeta ha sido creada:</p>
+    <p class="response__url">https://awesome-profile-card.com?id=A456DF0001</p>
+    <button class="share__button">
+        <i class="fab fa-twitter share__icon"></i>Compartir en twitter
+    </button>
+</article>
