@@ -23,11 +23,20 @@
     height: 329px;
     width: 240px;
     background-color: $white;
-    font-family: Montserrat;
+    font-family: $font-main-title;
+    font-weight: bold;
     padding-top: 21px;
   }
 
+  &__info {
+    padding-left: 15px;
+    margin-bottom: 10px;
+    position: relative;
+    border-left: 5px solid $color-dark-green;
+  }
+
   &__name {
+    margin: 0;
     font-size: 18px;
     color: $color-dark-green;
   }
@@ -35,10 +44,30 @@
   &__position {
     font-size: 16px;
     color: $color-font-grey;
+    margin-top: 4px;
   }
 
   &__profileImage {
     height: 200px;
     background-color: grey;
+    margin-bottom: 10px;
+  }
+
+  &__socialMedia {
+    display: flex;
+    justify-content: flex-start;
+    height: 45px;
+    padding-left: 20px;
+  }
+
+  &__socialMediaContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 32px;
+    border: 2px solid $green-light;
+    border-radius: 100%;
+    margin-right: 10px;
   }
 }
