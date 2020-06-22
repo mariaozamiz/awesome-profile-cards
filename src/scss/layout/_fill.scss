@@ -1,13 +1,17 @@
 .fill {
   font-family: "Open Sans", sans-serif;
   color: $color-dark-green;
-  padding: 20px;
 
   &__section {
     display: flex;
-    padding-left: 10px;
+    justify-content: space-between;
     padding-top: 20px;
     border-top: 1px solid $color-grey-light;
+
+    &--box {
+      display: flex;
+      flex-direction: row;
+    }
 
     &--title {
       font-size: 1.125em;
@@ -15,15 +19,16 @@
     }
 
     &--img {
+      padding-bottom: 0;
       margin-right: 10px;
-      width: 30px;
+      width: 21px;
+      height: 18;
       align-self: center;
     }
 
     &--button {
-      height: 20px;
-      width: 40px;
-      margin-left: 160px;
+      height: 16px;
+      width: 18px;
       align-self: center;
     }
   }
@@ -93,5 +98,8 @@
     border: 0.5px solid $green-light;
     height: 30px;
     margin-top: 7px;
+  }
+  fieldset {
+    padding: 0;
   }
 }
