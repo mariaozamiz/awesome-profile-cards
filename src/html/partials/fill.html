@@ -1,80 +1,78 @@
-<section class="fill">
+<section class="fill wrapper">
   <div class="fill__section">
     <i class="fa fa-keyboard-o fill__section--img" aria-hidden="true"></i>
     <h2 class="fill__section--title">rellena</h2>
     <a class="fill__section--button" href="#" data-toggle="collapse">
-      <img class="fill__section--img" src="./assets/images/scroll-down.png" />
+      <i class="fas fa-chevron-down fill__section--img"></i>
     </a>
   </div>
   <div class="form">
-    <form>
-      <fieldset>
-        <div class="form__name">
-          <label for="name">Nombre completo</label>
+    <fieldset>
+      <div class="form__name">
+        <label for="name">Nombre completo</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Ej: Chandler Bing"
+        />
+      </div>
+      <div class="form__job">
+        <label for="job">Puesto</label>
+        <input
+          type="text"
+          id="job"
+          name="jobPosition"
+          placeholder="Ej: Front-end developer"
+        />
+      </div>
+      <div class="form__img">
+        <label for="img">Imagen de perfil</label>
+        <div class="form__img--box">
+          <button class="form__img--box--button" type="button">
+            Añadir imagen
+          </button>
           <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Ej: Chandler Bing"
+            class="form__img--box--check"
+            id="imgOption"
+            type="checklist"
+            name="imgOptions"
           />
         </div>
-        <div class="form__job">
-          <label for="job">Puesto</label>
-          <input
-            type="text"
-            id="job"
-            name="jobPosition"
-            placeholder="Ej: Front-end developer"
-          />
-        </div>
-        <div class="form__img">
-          <label for="img">Imagen de perfil</label>
-          <div class="form__img--box">
-            <button class="form__img--box--button" type="button">
-              Añadir imagen
-            </button>
-            <input
-              class="form__img--box--check"
-              id="imgOption"
-              type="checklist"
-              name="imgOptions"
-            />
-          </div>
-        </div>
-      </fieldset>
-      <fieldset>
-        <div class="form__email">
-          <label for="email">Email</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Ej: chandler@friends.com"
-          />
-        </div>
-        <div class="form__phone">
-          <label for="phone">Teléfono</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="Ej: 555 2587695"
-          />
-        </div>
-        <div class="form__linkedin">
-          <label for="Linkedin">Linkedin</label>
-          <input
-            type="text"
-            id="#"
-            name="#"
-            placeholder="Ej: linkedin.com/Bing"
-          />
-        </div>
-        <div class="form__github">
-          <label for="github">Github</label>
-          <input type="text" id="#" name="#" placeholder="Ej:@chandlerbing" />
-        </div>
-      </fieldset>
-    </form>
+      </div>
+    </fieldset>
+    <fieldset>
+      <div class="form__email">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Ej: chandler@friends.com"
+        />
+      </div>
+      <div class="form__phone">
+        <label for="phone">Teléfono</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Ej: 555 2587695"
+        />
+      </div>
+      <div class="form__linkedin">
+        <label for="Linkedin">Linkedin</label>
+        <input
+          type="text"
+          id="#"
+          name="#"
+          placeholder="Ej: linkedin.com/Bing"
+        />
+      </div>
+      <div class="form__github">
+        <label for="github">Github</label>
+        <input type="text" id="#" name="#" placeholder="Ej:@chandlerbing" />
+      </div>
+    </fieldset>
   </div>
 </section>
