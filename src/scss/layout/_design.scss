@@ -2,25 +2,30 @@
   font-family: "Open Sans", sans-serif;
   color: $color-dark-green;
   text-transform: uppercase;
-  // width: 320px;
-  height: 340px;
-  border: 1px red solid;
+  padding: 20px;
+  height: 194px;
+
+  // .far fa-clone {
+  //   color: &orange;
+  // }
 
   &__section {
     display: flex;
     padding-left: 10px;
     padding-top: 20px;
-    border-top: 1px solid $color-grey-light;
 
     &--title {
       font-size: 1.125em;
       width: 65px;
+      margin-left: 15px;
+      padding-bottom: 20px;
     }
 
     &--img {
       margin-right: 10px;
       width: 30px;
-      margin-left: 160px;
+      align-self: center;
+      margin-left: 180px;
     }
   }
 
@@ -28,108 +33,108 @@
     font-size: 0.875em;
     padding-bottom: 20px;
 
-    .designform__palette {
+    &__palette {
       display: grid;
       grid-template-columns: 1fr 30px 30px 30px 30px;
       grid-template-rows: 33% 33% 33%;
       grid-row-gap: 10px;
+    }
 
-      .designform__colors {
-        grid-row-start: 1;
-        grid-row-end: 2;
-        grid-column-start: 1;
-        grid-column-start: 1;
-        width: 62px;
-        height: 19px;
-        padding-left: 30px;
-      }
-      .designform__palette1 {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
-      }
-      .designform__palette2 {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-      }
-      .designform__palette3 {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 3;
-        grid-row-end: 4;
-      }
-      .designform__color1 {
-        background-color: $color-dark-green;
-        width: 30px;
-        height: 25px;
-      }
-      .designform__color2 {
-        background-color: $blue;
-        width: 30px;
-        height: 25px;
-      }
-      .designform__color3 {
-        background-color: $green-light;
-        width: 30px;
-        height: 25px;
-      }
-      .designform__color4 {
-        background-color: $dried-blood;
-        width: 30px;
-        height: 25px;
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3;
-      }
-      .designform__color5 {
-        background-color: $rusty-red;
-        width: 30px;
-        height: 25px;
-        grid-column-start: 4;
-        grid-column-end: 5;
-        grid-row-start: 2;
-        grid-row-end: 3;
-      }
-      .designform__color6 {
-        background-color: $tomato;
-        width: 30px;
-        height: 25px;
-        grid-column-start: 5;
-        grid-column-end: 6;
-        grid-row-start: 2;
-        grid-row-end: 3;
-      }
-      .designform__color7 {
-        background-color: $slate;
-        width: 30px;
-        height: 25px;
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 3;
-        grid-row-end: 4;
-      }
-      .designform__color8 {
-        background-color: $faded-orange;
-        width: 30px;
-        height: 25px;
-        grid-column-start: 4;
-        grid-column-end: 5;
-        grid-row-start: 3;
-        grid-row-end: 4;
-      }
-      .designform__color9 {
-        background-color: $light-grey-blue;
-        width: 30px;
-        height: 25px;
-        grid-column-start: 5;
-        grid-column-end: 6;
-        grid-row-start: 3;
-        grid-row-end: 4;
-      }
+    &__colors {
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-start: 1;
+      width: 62px;
+      height: 19px;
+      padding-left: 30px;
+    }
+    &__palette1 {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+    &__palette2 {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+    &__palette3 {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+    &__color1 {
+      background-color: $color-dark-green;
+      width: 30px;
+      height: 25px;
+    }
+    &__color2 {
+      background-color: $blue;
+      width: 30px;
+      height: 25px;
+    }
+    &__color3 {
+      background-color: $green-light;
+      width: 30px;
+      height: 25px;
+    }
+    &__color4 {
+      background-color: $dried-blood;
+      width: 30px;
+      height: 25px;
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+    &__color5 {
+      background-color: $rusty-red;
+      width: 30px;
+      height: 25px;
+      grid-column-start: 4;
+      grid-column-end: 5;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+    &__color6 {
+      background-color: $tomato;
+      width: 30px;
+      height: 25px;
+      grid-column-start: 5;
+      grid-column-end: 6;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+    &__color7 {
+      background-color: $slate;
+      width: 30px;
+      height: 25px;
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+    &__color8 {
+      background-color: $faded-orange;
+      width: 30px;
+      height: 25px;
+      grid-column-start: 4;
+      grid-column-end: 5;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+    &__color9 {
+      background-color: $light-grey-blue;
+      width: 30px;
+      height: 25px;
+      grid-column-start: 5;
+      grid-column-end: 6;
+      grid-row-start: 3;
+      grid-row-end: 4;
     }
   }
 }
