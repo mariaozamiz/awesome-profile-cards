@@ -13,9 +13,10 @@
       display: flex;
       flex-direction: row;
     }
-    // .far fa-clone {
-    //   color: $orange;
-    // }
+    .far,
+    .fa-clone {
+      color: $orange;
+    }
     &--title {
       font-size: 1.125em;
       padding-left: 10px;
