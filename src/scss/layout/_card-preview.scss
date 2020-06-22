@@ -17,6 +17,10 @@
     outline: inherit;
     cursor: pointer;
     margin-bottom: 20px;
+
+    i {
+      padding-right: 5px;
+    }
   }
 
   &__card {
@@ -24,8 +28,8 @@
     width: 240px;
     background-color: $white;
     font-family: $font-main-title;
-    font-weight: bold;
     padding-top: 21px;
+    box-shadow: 2px 2px 9px 0px rgba(173, 171, 173, 1);
   }
 
   &__info {
@@ -38,12 +42,14 @@
   &__name {
     margin: 0;
     font-size: 18px;
+    font-weight: bold;
     color: $color-dark-green;
   }
 
   &__position {
     font-size: 16px;
     color: $color-font-grey;
+    font-weight: lighter;
     margin-top: 4px;
   }
 
@@ -69,5 +75,10 @@
     border: 2px solid $green-light;
     border-radius: 100%;
     margin-right: 10px;
+
+    .fas,
+    .fab {
+      color: $color-dark-green;
+    }
   }
 }
