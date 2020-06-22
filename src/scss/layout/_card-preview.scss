@@ -1,9 +1,32 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: grey;
+  padding: 20px 40px;
+
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
 .cardPreview {
   display: flex;
-  flex-direction: column;
   height: 457px;
   background-color: $pale-grey;
   padding: 38px 45px 40px 45px;
+  grid-column: 2/4;
+  grid-row: 1/4;
+
+  @include tablet {
+    justify-content: center;
+    align-items: center;
+    height: 812px;
+  }
+
+  &__cardWrapper {
+    width: 240px;
+  }
 
   &__clearButton {
     height: 30px;
