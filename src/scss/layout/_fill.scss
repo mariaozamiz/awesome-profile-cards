@@ -30,6 +30,7 @@
       height: 16px;
       width: 18px;
       align-self: center;
+      cursor: pointer;
     }
   }
 }
@@ -66,11 +67,13 @@
       border-radius: 5px;
       border-style: none;
       background-color: $orange;
+      cursor: pointer;
     }
     &--box--check {
       height: 30px;
       width: 30px;
       border: 0.5px solid $green-light;
+      cursor: pointer;
     }
   }
 
