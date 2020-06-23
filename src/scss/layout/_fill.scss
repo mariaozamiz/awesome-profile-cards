@@ -98,10 +98,15 @@
     padding-top: 20px;
   }
   input {
+    padding-left: 5px;
     border: 0.5px solid $green-light;
     height: 30px;
     margin-top: 7px;
   }
+  ::placeholder {
+    color: $pinkish-grey;
+  }
+
   fieldset {
     padding: 0;
   }
