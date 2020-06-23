@@ -78,7 +78,9 @@
 
   &__profileImage {
     height: 200px;
-    background-color: grey;
+    background-image: url("../images/profile-image.png");
+    background-position: center;
+    background-repeat: no-repeat;
     margin-bottom: 10px;
   }
 
