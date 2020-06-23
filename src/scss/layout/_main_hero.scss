@@ -70,9 +70,16 @@
 }
 .fa-clone, .fa-keyboard-o{
   font-size:20px;
+  @include tablet{
+    font-size:30px;
+  }
 }
 .fa-share-alt{
 font-size:18px; 
+@include tablet{
+  font-size:25px;
+  padding-top:2px;
+}
 }   
 .span-text {
   font-size: 12.8px;
