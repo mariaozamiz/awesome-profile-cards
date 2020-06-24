@@ -86,6 +86,10 @@
 .span-text {
   font-size: 12.8px;
   color: $color-font-grey;
+  font-family:$font-start-main;
+  @include tablet{
+    font-size:16px;
+  }
 }
 .icon-square {
   width: 60px;
