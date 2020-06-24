@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Team 3</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/05c1aeb841.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <header class="header">
+      <a href="#"
+          ><img
+              src="../assets/images/logo-awesome-profile-cards.svg"
+              alt="awesome profile cards logo"
+              class="header__logo"
+      /></a>
+  </header>
+
+  <main class="main">
+    <section class="cardPreview">
+      <div class="cardPreview__cardWrapper">
+        <button class="cardPreview__clearButton">
+          <i class="far fa-trash-alt"></i>
+          RESET
+        </button>
+        <div class="cardPreview__card">
+          <div class="cardPreview__info">
+            <h1 class="cardPreview__name">Nombre Apellido</h1>
+            <h2 class="cardPreview__position">Front-End developer</h2>
+          </div>
+          <div class="cardPreview__profileImage">
+            <img />
+          </div>
+          <div class="cardPreview__socialMedia">
+            <div class="cardPreview__socialMediaContainer">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="cardPreview__socialMediaContainer">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="cardPreview__socialMediaContainer">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+            <div class="cardPreview__socialMediaContainer">
+              <i class="fab fa-github-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <form>
+      <section class="design wrapper">
+        <div class="design__section">
+          <div class="desgin__section--box">
+            <i class="far fa-clone"></i>
+            <h2 class="design__section--title">Diseña</h2>
+          </div>
+          <a class="design__section--button" href="#" data-toggle="collapse">
+            <i class="fas fa-chevron-down design__section--img"></i>
+          </a>
+        </div>
+        <div class="designform">
+          <fieldset>
+            <div class="designform__palette">
+              <div class="designform__colors">
+                <label for="name">Colores</label>
+              </div>
+              <div class="designform__palette1">
+                <input
+                  id="palette1"
+                  type="radio"
+                  value="palette"
+                  name="paletteoptions"
+                />
+              </div>
+              <div class="designform__palette2">
+                <input
+                  id="palette2"
+                  type="radio"
+                  value="palette"
+                  name="paletteoptions"
+                />
+              </div>
+
+              <div class="designform__palette3">
+                <input
+                  id="palette3"
+                  type="radio"
+                  value="palette"
+                  name="paletteoptions"
+                />
+              </div>
+              <div class="designform__color1"></div>
+              <div class="designform__color2"></div>
+              <div class="designform__color3"></div>
+              <div class="designform__color4"></div>
+              <div class="designform__color5"></div>
+              <div class="designform__color6"></div>
+              <div class="designform__color7"></div>
+              <div class="designform__color8"></div>
+              <div class="designform__color9"></div>
+            </div>
+          </fieldset>
+        </div>
+      </section>
+
+      <section class="fill wrapper">
+          <div class="fill__section">
+              <div class="fill__section--box">
+                  <i
+                      class="fa fa-keyboard-o fill__section--img"
+                      aria-hidden="true"
+                  ></i>
+                  <h2 class="fill__section--title">rellena</h2>
+              </div>
+              <a class="fill__section--button" href="#" data-toggle="collapse">
+                  <i class="fas fa-chevron-down fill__section--img"></i>
+              </a>
+          </div>
+          <div class="form">
+              <fieldset>
+                  <div class="form__name">
+                      <label for="name">Nombre completo</label>
+                      <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          placeholder="Ej: Leela Turanga"
+                      />
+                  </div>
+                  <div class="form__job">
+                      <label for="job">Puesto</label>
+                      <input
+                          type="text"
+                          id="job"
+                          name="jobPosition"
+                          placeholder="Ej: Front-end developer"
+                      />
+                  </div>
+                  <div class="form__img">
+                      <label for="img">Imagen de perfil</label>
+                      <div class="form__img--box">
+                          <button class="form__img--box--button" type="button">
+                              Añadir imagen
+                          </button>
+                          <input
+                              class="form__img--box--check"
+                              id="imgOption"
+                              type="check"
+                              name="imgOptions"
+                          />
+                      </div>
+                  </div>
+              </fieldset>
+              <fieldset>
+                  <div class="form__email">
+                      <label for="email">Email</label>
+                      <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          placeholder="Ej: leela@planet-express.com"
+                      />
+                  </div>
+                  <div class="form__phone">
+                      <label for="phone">Teléfono</label>
+                      <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          placeholder="Ej: 555 2587695"
+                          pattern="[0-9]{9}"
+                      />
+                  </div>
+                  <div class="form__linkedin">
+                      <label for="Linkedin">Linkedin</label>
+                      <input
+                          type="text"
+                          id="linkedin"
+                          name="linkedin"
+                          placeholder="Ej: linkedin.com/Leela"
+                      />
+                  </div>
+                  <div class="form__github">
+                      <label for="github">Github</label>
+                      <input
+                          type="text"
+                          id="github"
+                          name="github"
+                          placeholder="Ej:@leelaturanga"
+                      />
+                  </div>
+              </fieldset>
+          </div>
+      </section>
+
+      <!-- closed TAB -->
+      <section class="share wrapper">
+          <div class="share__tab">
+              <div class="share__tab--description">
+                  <i class="fas fa-share-alt tab__image"></i>
+                  <h2 class="tab__text">comparte</h2>
+              </div>
+              <i class="fas fa-chevron-down tab__icon"></i>
+          </div>
+          <!-- opened TAB -->
+          <button class="form__button form__button--active">
+              <i class="far fa-address-card"></i>crear tarjeta
+          </button>
+      </section>
+      <!--opened TAB + action button -->
+
+      <section class="notification wrapper">
+          <p>La tarjeta ha sido creada:</p>
+          <p class="response__url">https://awesome-profile-card.com?id=A456DF0001</p>
+          <button class="share__button">
+              <i class="fab fa-twitter share__icon"></i>Compartir en twitter
+          </button>
+      </section>
+
+    </form>
+  </main>
+  <footer class="footer">
+    <p class="footer-text">Awesome profile-cards @2018</p>
+    <img class="footer-logo" src="./assets/images/logo-adalab.png" />
+  </footer>
+
+  <body></body>
+</html>
