@@ -23,13 +23,14 @@
       padding-bottom: 0;
       margin-right: 10px;
       width: 21px;
-      height: 18;
+      height: 18px;
     }
 
-    &--button {
+    &--img2 {
       height: 16px;
       width: 18px;
       align-self: center;
+      text-align: end;
       cursor: pointer;
     }
   }
@@ -111,3 +112,9 @@
     padding: 0;
   }
 }
+// COLLAPSIBLE (DESPLEGAR EN JS CON EVENTO)
+
+// .content {
+//   display: none;
+//   overflow: hidden;
+// }

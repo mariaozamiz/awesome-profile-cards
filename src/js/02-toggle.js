@@ -1,1 +1,1 @@
-console.log('partial 2');
+console.log("partial 2");
