@@ -61,17 +61,16 @@
     padding-left: 15px;
     margin-bottom: 10px;
     position: relative;
-    border-left: 5px solid $color-dark-green;
+    border-left: 5px solid;
   }
 
   &__name {
     margin: 0;
     font-size: 18px;
     font-weight: bold;
-    color: $color-dark-green;
   }
 
-  &__position {
+&__position {
     font-size: 16px;
     color: $color-font-grey;
     font-weight: lighter;
@@ -100,13 +99,49 @@
     align-items: center;
     height: 32px;
     width: 32px;
-    border: 2px solid $green-light;
+    border: 2px solid;
     border-radius: 100%;
     margin-right: 10px;
 
-    .fas,
+    /* .fas,
     .fab {
       color: $color-dark-green;
-    }
+    } */
   }
+}
+
+.js_palette1_color {
+  color: $color-dark-green;
+}
+
+.js_palette1_border_color {
+  border-color: $green-light;
+}
+
+.js_palette1_border_box {
+  color: $blue;
+}
+
+.js_palette2_color {
+  color: $dried-blood;
+}
+
+.js_palette2_border_color {
+  border-color: $tomato;
+}
+
+.js_palette2_border_box {
+  color: $rusty-red ;
+}
+
+.js_palette3_color {
+  color: $slate;
+}
+
+.js_palette3_border_color {
+  border-color: $light-grey-blue;
+}
+
+.js_palette3_border_box {
+  color: $faded-orange ;
 }
