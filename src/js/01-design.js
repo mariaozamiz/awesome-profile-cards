@@ -74,7 +74,6 @@ inputPalette3.addEventListener("change", changeToPalette);
 // media
 
 
-//selectors
 const inputEmail = document.querySelector(".form__email");
 const inputLinkedin = document.querySelector(".form__linkedin");
 const inputGithub = document.querySelector(".form__github");
@@ -85,7 +84,7 @@ function addHref(event) {
   if (event.target.name === "email") {
     document.querySelector(".js-" + event.target.name).href = `mailto:${inputValue}`;
   } else {
-    document.querySelector(".js-" + event.target.name).href = `https://www.${inputValue}`;
+    document.querySelector(".js-" + event.target.name).href = `${inputValue}`;
   }
 }
 
@@ -94,4 +93,15 @@ inputEmail.addEventListener("keyup", addHref);
 inputLinkedin.addEventListener("keyup", addHref);
 inputGithub.addEventListener("keyup", addHref);
 
+
+//Collapsable
+
+const collapsable = document.querySelectorAll(".js-collapsable");
+function collapse(event){
+collapsable.classList.toggle(".content");
+console.log(collapsable);
+}
+
+
+collapsable.addEventListener("click", collapse);
 
