@@ -96,7 +96,7 @@ inputGithub.addEventListener("keyup", addHref);
 
 //Collapsable
 
-const collapsable = document.querySelectorAll(".js-collapsable");
+/* const collapsable = document.querySelectorAll(".js-collapsable");
 function collapse(event){
 collapsable.classList.toggle(".content");
 console.log(collapsable);
@@ -105,3 +105,4 @@ console.log(collapsable);
 
 collapsable.addEventListener("click", collapse);
 
+ */
