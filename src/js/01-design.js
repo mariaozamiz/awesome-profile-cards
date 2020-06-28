@@ -23,34 +23,36 @@ const inputPalette2 = document.querySelector(".js_palette2");
 const inputPalette3 = document.querySelector(".js_palette3");
 
 //Cuando la llamamos borra las clases de los elementos que se añaden al seleccionar o que ya tenían
-function removeClassesFromElement (element, property) {
+function removeClassesFromElement(element, property) {
   element.classList.remove(`js_palette1${property}`);
   element.classList.remove(`js_palette2${property}`);
   element.classList.remove(`js_palette3${property}`);
 }
 
 //Lo mismo que removeClassesFromElement para más de un elemento (array de iconos)
-function removeClassesFromElements (elements, property) {
-  for(let i = 0; i < elements.length ; i++) {
+function removeClassesFromElements(elements, property) {
+  for (let i = 0; i < elements.length; i++) {
     removeClassesFromElement(elements[i], property);
   }
 }
 
 //Añade una clase a una lista de elementos (array)
-function addClassToElements (elements, classToAdd) {
-  for(let i = 0; i < elements.length ; i++) {
+function addClassToElements(elements, classToAdd) {
+  for (let i = 0; i < elements.length; i++) {
     elements[i].classList.add(classToAdd);
   }
 }
 
-//Cambia el color 
+//Cambia el color
 function changeToPalette(event) {
-//Cogemos los elementos por clase
+  //Cogemos los elementos por clase
   const cardPreviewName = document.querySelector(".js-name");
   const cardPreviewBorderBox = document.querySelector(".js-border-box");
   const cardPreviewIcons = document.querySelectorAll(".js-icon");
-  const cardPreviewIconsContainer = document.querySelectorAll(".js-icon-container");
-  
+  const cardPreviewIconsContainer = document.querySelectorAll(
+    ".js-icon-container"
+  );
+
   //Borramos las clases que ya no queremos con las funciones previamente declaradas
   removeClassesFromElement(cardPreviewName, "_color");
   removeClassesFromElement(cardPreviewBorderBox, "_border_box");
@@ -61,18 +63,18 @@ function changeToPalette(event) {
   cardPreviewName.classList.add(`${event.target.className}_color`);
   cardPreviewBorderBox.classList.add(`${event.target.className}_border_box`);
   addClassToElements(cardPreviewIcons, `${event.target.className}_color`);
-  addClassToElements(cardPreviewIconsContainer, `${event.target.className}_border_color`);
+  addClassToElements(
+    cardPreviewIconsContainer,
+    `${event.target.className}_border_color`
+  );
 }
-
 
 //Añadimos los escuchadores a los checkbox
 inputPalette1.addEventListener("change", changeToPalette);
 inputPalette2.addEventListener("change", changeToPalette);
 inputPalette3.addEventListener("change", changeToPalette);
 
-
 // media
-
 
 const inputEmail = document.querySelector(".form__email");
 const inputLinkedin = document.querySelector(".form__linkedin");
@@ -82,17 +84,17 @@ const inputGithub = document.querySelector(".form__github");
 function addHref(event) {
   const inputValue = event.target.value;
   if (event.target.name === "email") {
-    document.querySelector(".js-" + event.target.name).href = `mailto:${inputValue}`;
+    document.querySelector(
+      ".js-" + event.target.name
+    ).href = `mailto:${inputValue}`;
   } else {
     document.querySelector(".js-" + event.target.name).href = `${inputValue}`;
   }
 }
 
-
 inputEmail.addEventListener("keyup", addHref);
 inputLinkedin.addEventListener("keyup", addHref);
 inputGithub.addEventListener("keyup", addHref);
-
 
 //Collapsable
 
@@ -106,3 +108,12 @@ console.log(collapsable);
 collapsable.addEventListener("click", collapse);
 
  */
+
+// Boton clear
+const clearButton = document.querySelector(".js-clear-button");
+
+function handleClearButtonClick() {
+  document.querySelector(".js-form").reset();
+}
+
+clearButton.addEventListener("click", handleClearButtonClick);
