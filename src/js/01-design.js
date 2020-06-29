@@ -79,7 +79,7 @@ inputPalette3.addEventListener("change", changeToPalette);
 const inputEmail = document.querySelector(".form__email");
 const inputLinkedin = document.querySelector(".form__linkedin");
 const inputGithub = document.querySelector(".form__github");
-//const inputEmail = document.querySelector(".form__email");
+const inputPhone = document.querySelector(".form__phone");
 
 function addHref(event) {
   const inputValue = event.target.value;
@@ -87,6 +87,9 @@ function addHref(event) {
     document.querySelector(
       ".js-" + event.target.name
     ).href = `mailto:${inputValue}`;
+  } else if(event.target.name==="phone"){
+    document.querySelector(".js-"+ event.target.name).href= `tel:+34${inputValue}`;
+    console.log(`tel:+34${inputValue}`);
   } else {
     document.querySelector(".js-" + event.target.name).href = `${inputValue}`;
   }
@@ -95,6 +98,7 @@ function addHref(event) {
 inputEmail.addEventListener("keyup", addHref);
 inputLinkedin.addEventListener("keyup", addHref);
 inputGithub.addEventListener("keyup", addHref);
+inputPhone.addEventListener("keyup",addHref);
 
 //Collapsable
 
