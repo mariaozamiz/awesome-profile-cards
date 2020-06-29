@@ -6,10 +6,18 @@ console.log("partial 1");
 const inputName = document.querySelector(".input__name");
 const inputPosition = document.querySelector(".input__position");
 
-function addInfo(event) {
-  const inputValue = event.target.value;
-  document.querySelector(".js-" + event.target.name).innerHTML = inputValue;
-  console.log(".js-" + event.target.name);
+function addInfo() {
+  addInfo2("name", "Nombre Apellido");
+  addInfo2("position", "Front End Developer");
+}
+
+function addInfo2(name, placeholder) {
+  const inputValue = document.querySelector(".js-input-" + name).value;
+  document.querySelector(".js-" + name).innerHTML = inputValue;
+  console.log(inputValue);
+  if (!inputValue) {
+    document.querySelector(".js-" + name).innerHTML = placeholder;
+  }
 }
 
 inputName.addEventListener("keyup", addInfo);
@@ -45,7 +53,7 @@ function addClassToElements(elements, classToAdd) {
 
 //Cambia el color
 function changeToPalette(event) {
-  //Cogemos los elementos por clase
+  // Cogemos los elementos por clase
   const cardPreviewName = document.querySelector(".js-name");
   const cardPreviewBorderBox = document.querySelector(".js-border-box");
   const cardPreviewIcons = document.querySelectorAll(".js-icon");
@@ -110,10 +118,20 @@ collapsable.addEventListener("click", collapse);
  */
 
 // Boton clear
+
+const cardPreviewName = document.querySelector(".js-name");
+const cardPreviewBorderBox = document.querySelector(".js-border-box");
+const cardPreviewIcons = document.querySelectorAll(".js-icon");
+const cardPreviewIconsContainer = document.querySelectorAll(
+  ".js-icon-container"
+);
+
 const clearButton = document.querySelector(".js-clear-button");
 
 function handleClearButtonClick() {
   document.querySelector(".js-form").reset();
+  addInfo();
+  // cardPreviewName.innerHTML = "";
 }
 
 clearButton.addEventListener("click", handleClearButtonClick);
