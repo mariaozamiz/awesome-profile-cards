@@ -70,7 +70,7 @@
     font-weight: bold;
   }
 
-&__position {
+  &__position {
     font-size: 16px;
     color: $color-font-grey;
     font-weight: lighter;
@@ -131,7 +131,7 @@
 }
 
 .js_palette2_border_box {
-  color: $rusty-red ;
+  color: $rusty-red;
 }
 
 .js_palette3_color {
@@ -143,5 +143,27 @@
 }
 
 .js_palette3_border_box {
-  color: $faded-orange ;
+  color: $faded-orange;
+}
+.js_palette4_color {
+  color: $orange-hair;
+}
+
+.js_palette4_border_color {
+  border-color: $orange-tshirt;
+}
+
+.js_palette4_border_box {
+  color: $blue-jeans;
+}
+.js_palette5_color {
+  color: $black;
+}
+
+.js_palette5_border_color {
+  border-color: $yellow-skin;
+}
+
+.js_palette5_border_box {
+  color: $pink-trousers;
 }
