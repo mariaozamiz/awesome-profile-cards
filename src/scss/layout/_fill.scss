@@ -58,6 +58,7 @@
 
     &--box {
       margin-top: 10px;
+      display: flex;
     }
 
     &--box--button {
@@ -70,7 +71,7 @@
       background-color: $orange;
       cursor: pointer;
     }
-    &--box--check {
+    &--box--preview {
       height: 30px;
       width: 30px;
       border: 0.5px solid $green-light;
