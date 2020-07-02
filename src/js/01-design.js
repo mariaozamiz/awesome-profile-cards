@@ -25,12 +25,12 @@ inputPosition.addEventListener("keyup", addInfo);
 
 //color-palette
 
-//Guardamos los inputs
+//Guardamos los inputs desde design.html
 const inputPalette1 = document.querySelector(".js_palette1");
 const inputPalette2 = document.querySelector(".js_palette2");
 const inputPalette3 = document.querySelector(".js_palette3");
 
-//Cuando la llamamos borra las clases de los elementos que se añaden al seleccionar o que ya tenían
+//Cuando la llamamos borra las clases de los elementos que se añaden al seleccionar o que ya tenían (ahora en card preview)
 function removeClassesFromElement(element, property) {
   element.classList.remove(`js_palette1${property}`);
   element.classList.remove(`js_palette2${property}`);
@@ -98,8 +98,10 @@ function addHref(event) {
   } else if(event.target.name==="phone"){
     document.querySelector(".js-"+ event.target.name).href= `tel:+34${inputValue}`;
     console.log(`tel:+34${inputValue}`);
-  } else {
-    document.querySelector(".js-" + event.target.name).href = `${inputValue}`;
+  } else if (event.target.name==="linkedin") {
+    document.querySelector(".js-" + event.target.name).href = `https://www.linkedin.com/in/${inputValue}`;
+  }else if (event.target.name==="github"){
+    document.querySelector(".js-" + event.target.name).href = `https://github.com/${inputValue}`;
   }
 }
 
