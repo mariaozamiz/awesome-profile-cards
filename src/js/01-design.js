@@ -20,14 +20,14 @@ inputName.addEventListener('keyup', readForm);
 inputPosition.addEventListener('keyup', readForm);
 
 function updateCard() {
-    updateCardItem('name', 'Nombre Apellido', 'innerHTML');
-    updateCardItem('position', 'Front End Developer', 'innerHTML');
+    updateCardItem('name', 'Nombre Apellido');
+    updateCardItem('position', 'Front End Developer');
     // updateCardItem('linkedin', 'https://linkeding/in/', 'href');
     // updateCardItem('github', 'https://github.com/', 'href');
     // updateCardLink('github', 'https://github.com/', 'href');
 }
 
-function updateCardItem(propertyName, placeholder, tagProperty) {
+function updateCardItem(propertyName, placeholder) {
     const inputValue = data[propertyName];
     let cardValue;
     if (inputValue) {
