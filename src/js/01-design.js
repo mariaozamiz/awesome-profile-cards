@@ -1,8 +1,10 @@
 "use strict";
 
 let data = {
-  name: "",
-  position: "",
+
+  name: '',
+  position: '',
+
 };
 
 //selectors
@@ -11,8 +13,10 @@ const inputName = document.querySelector(".input__name");
 const inputPosition = document.querySelector(".input__position");
 
 function readForm() {
-  data.name = document.querySelector(".js-input-name").value;
-  data.position = document.querySelector(".js-input-position").value;
+
+  data.name = document.querySelector('.js-input-name').value;
+  data.position = document.querySelector('.js-input-position').value;
+
   updateCard();
 }
 
@@ -20,8 +24,10 @@ inputName.addEventListener("keyup", readForm);
 inputPosition.addEventListener("keyup", readForm);
 
 function updateCard() {
-  updateCardItem("name", "Nombre Apellido");
-  updateCardItem("position", "Front End Developer");
+
+  updateCardItem('name', 'Nombre Apellido');
+  updateCardItem('position', 'Front End Developer');
+
   // updateCardItem('linkedin', 'https://linkeding/in/', 'href');
   // updateCardItem('github', 'https://github.com/', 'href');
   // updateCardLink('github', 'https://github.com/', 'href');
@@ -35,7 +41,9 @@ function updateCardItem(propertyName, placeholder) {
   } else {
     cardValue = placeholder;
   }
-  document.querySelector(".js-" + propertyName).innerHTML = cardValue;
+
+  document.querySelector('.js-' + propertyName).innerHTML = cardValue;
+
 }
 
 // function updateCardLink(propertyName, placeholder) {
@@ -51,6 +59,7 @@ function updateCardItem(propertyName, placeholder) {
 
 //color-palette
 
+
 //Guardamos los inputs
 const inputPalette1 = document.querySelector(".js_palette1");
 const inputPalette2 = document.querySelector(".js_palette2");
@@ -58,7 +67,15 @@ const inputPalette3 = document.querySelector(".js_palette3");
 const inputPalette4 = document.querySelector(".js_palette4");
 const inputPalette5 = document.querySelector(".js_palette5");
 
-//Cuando la llamamos borra las clases de los elementos que se añaden al seleccionar o que ya tenían
+
+//Guardamos los inputs desde design.html
+//const inputPalette1 = document.querySelector(".js_palette1");
+//const inputPalette2 = document.querySelector(".js_palette2");
+//const inputPalette3 = document.querySelector(".js_palette3");
+
+
+
+//Cuando la llamamos borra las clases de los elementos que se añaden al seleccionar o que ya tenían (ahora en card preview)
 function removeClassesFromElement(element, property) {
   element.classList.remove(`js_palette1${property}`);
   element.classList.remove(`js_palette2${property}`);
@@ -84,18 +101,20 @@ function addClassToElements(elements, classToAdd) {
 //Cambia el color
 function changeToPalette(event) {
   // Cogemos los elementos por clase
-  const cardPreviewName = document.querySelector(".js-name");
-  const cardPreviewBorderBox = document.querySelector(".js-border-box");
-  const cardPreviewIcons = document.querySelectorAll(".js-icon");
+
+  const cardPreviewName = document.querySelector('.js-name');
+  const cardPreviewBorderBox = document.querySelector('.js-border-box');
+  const cardPreviewIcons = document.querySelectorAll('.js-icon');
   const cardPreviewIconsContainer = document.querySelectorAll(
-    ".js-icon-container"
+    '.js-icon-container'
   );
 
   //Borramos las clases que ya no queremos con las funciones previamente declaradas
-  removeClassesFromElement(cardPreviewName, "_color");
-  removeClassesFromElement(cardPreviewBorderBox, "_border_box");
-  removeClassesFromElements(cardPreviewIcons, "_color");
-  removeClassesFromElements(cardPreviewIconsContainer, "_border_color");
+  removeClassesFromElement(cardPreviewName, '_color');
+  removeClassesFromElement(cardPreviewBorderBox, '_border_box');
+  removeClassesFromElements(cardPreviewIcons, '_color');
+  removeClassesFromElements(cardPreviewIconsContainer, '_border_color');
+
 
   //Añadimos las clases basándonos en la clase del checkbox que se seleccionó
   cardPreviewName.classList.add(`${event.target.className}_color`);
@@ -114,13 +133,14 @@ inputPalette3.addEventListener("change", changeToPalette);
 inputPalette4.addEventListener("change", changeToPalette);
 inputPalette5.addEventListener("change", changeToPalette);
 
-// media
+// MEDIA
 
 const inputEmail = document.querySelector(".form__email");
 const inputLinkedin = document.querySelector(".form__linkedin");
 const inputGithub = document.querySelector(".form__github");
 const inputPhone = document.querySelector(".form__phone");
 
+/*<<<<<<< ticket/17
 function addHref(event) {
   const inputValue = event.target.value;
   if (event.target.name === "email") {
@@ -134,6 +154,36 @@ function addHref(event) {
     console.log(`tel:+34${inputValue}`);
   } else {
     document.querySelector(".js-" + event.target.name).href = `${inputValue}`;
+=======*/
+function hideIcon(name, inputValue) {
+  const iconContainer = document.querySelector(`.jscontainer-${name}`);
+  console.log(`jscontainer-${name}`);
+  if(inputValue !== "") {
+      iconContainer.classList.remove("hidden-icon");
+    } else {
+      iconContainer.classList.add("hidden-icon");
+    };
+}
+
+function addHref(event) {
+  const inputValue = event.target.value;
+  
+  const icon = document.querySelector(
+    ".js-" + event.target.name
+  );
+
+  hideIcon(event.target.name, inputValue);
+
+  if (event.target.name === "email") {
+    icon.href = `mailto:${inputValue}`;
+  } else if(event.target.name==="phone"){
+    icon.href= `tel:+34${inputValue}`;
+  } else if (event.target.name==="linkedin") {
+    icon.href = `https://www.linkedin.com/in/${inputValue}`;
+  } else if (event.target.name==="github"){
+    icon.href = `https://github.com/${inputValue}`;
+
+
   }
 }
 
@@ -161,15 +211,19 @@ const cardPreviewName = document.querySelector(".js-name");
 const cardPreviewBorderBox = document.querySelector(".js-border-box");
 const cardPreviewIcons = document.querySelectorAll(".js-icon");
 const cardPreviewIconsContainer = document.querySelectorAll(
-  ".js-icon-container"
+
+  '.js-icon-container'
+
 );
 
 const clearButton = document.querySelector(".js-clear-button");
 
 function handleClearButtonClick() {
-  document.querySelector(".js-form").reset();
-  data.name = "";
-  data.position = "";
+
+  document.querySelector('.js-form').reset();
+  data.name = '';
+  data.position = '';
+
   updateCard();
 }
 
