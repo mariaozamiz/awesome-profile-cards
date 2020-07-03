@@ -49,8 +49,8 @@
   }
 
   &__card {
-    height: 329px;
     width: 240px;
+    overflow: hidden;
     background-color: $white;
     font-family: $font-main-title;
     padding-top: 21px;
@@ -70,7 +70,7 @@
     font-weight: bold;
   }
 
-&__position {
+  &__position {
     font-size: 16px;
     color: $color-font-grey;
     font-weight: lighter;
@@ -79,7 +79,7 @@
 
   &__profileImage {
     height: 200px;
-    background-image: url("../images/profile-image.jpg");
+    background-image: url('../images/profile-image.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -102,11 +102,6 @@
     border: 2px solid;
     border-radius: 100%;
     margin-right: 10px;
-
-    /* .fas,
-    .fab {
-      color: $color-dark-green;
-    } */
   }
 }
 
@@ -131,7 +126,7 @@
 }
 
 .js_palette2_border_box {
-  color: $rusty-red ;
+  color: $rusty-red;
 }
 
 .js_palette3_color {
@@ -143,5 +138,5 @@
 }
 
 .js_palette3_border_box {
-  color: $faded-orange ;
+  color: $faded-orange;
 }
