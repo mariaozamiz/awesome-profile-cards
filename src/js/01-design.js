@@ -1,8 +1,14 @@
 'use strict';
 
 let data = {
+  palette: '',
   name: '',
   job: '',
+  email: '',
+  phone: '',
+  linkedin: '',
+  github: '',
+  photo: '',
 };
 
 //selectors
@@ -16,7 +22,6 @@ function readForm() {
 
   updateCard();
 }
-
 inputName.addEventListener('keyup', readForm);
 inputJob.addEventListener('keyup', readForm);
 
@@ -24,7 +29,7 @@ function updateCard() {
   updateCardItem('name', 'Nombre Apellido');
   updateCardItem('job', 'Front End Developer');
 
-  // updateCardItem('linkedin', 'https://linkeding/in/', 'href');
+  // updateCardItem('linkedin', 'https://linkedin/in/', 'href');
   // updateCardItem('github', 'https://github.com/', 'href');
   // updateCardLink('github', 'https://github.com/', 'href');
 }
@@ -42,14 +47,14 @@ function updateCardItem(propertyName, placeholder) {
 }
 
 // function updateCardLink(propertyName, placeholder) {
-//     const inputValue = data[propertyName];
-//     let cardValue;
-//     if (inputValue) {
-//         cardValue = inputValue;
-//     } else {
-//         cardValue = placeholder;
-//     }
-//     document.querySelector('.js-' + propertyName).href = cardValue;
+//   const inputValue = data[propertyName];
+//   let cardValue;
+//   if (inputValue) {
+//     cardValue = inputValue;
+//   } else {
+//     cardValue = placeholder;
+//   }
+//   document.querySelector('.js-' + propertyName).href = cardValue;
 // }
 
 //color-palette
@@ -205,7 +210,7 @@ const clearButton = document.querySelector('.js-clear-button');
 function handleClearButtonClick() {
   document.querySelector('.js-form').reset();
   data.name = '';
-  data.position = '';
+  data.job = '';
 
   updateCard();
 }

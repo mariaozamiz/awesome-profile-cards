@@ -10,9 +10,3 @@ function createCollapsibleButtonListeners() {
 }
 
 createCollapsibleButtonListeners();
-
-// function collForm(event) {
-//   collContent.classList.toggle('content');
-// }
-
-// collButton.addEventListener('click', collForm);
