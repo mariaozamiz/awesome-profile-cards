@@ -1,35 +1,66 @@
 'use strict';
 
+let data = {
+  name: '',
+  position: '',
+};
+
 //selectors
 
 const inputName = document.querySelector('.input__name');
 const inputPosition = document.querySelector('.input__position');
 
-function addInfo() {
-  addInfo2('name', 'Nombre Apellido');
-  addInfo2('position', 'Front End Developer');
+function readForm() {
+  data.name = document.querySelector('.js-input-name').value;
+  data.position = document.querySelector('.js-input-position').value;
+  updateCard();
 }
 
-function addInfo2(name, placeholder) {
-  const inputValue = document.querySelector('.js-input-' + name).value;
-  document.querySelector('.js-' + name).innerHTML = inputValue;
-  console.log(inputValue);
-  if (!inputValue) {
-    document.querySelector('.js-' + name).innerHTML = placeholder;
+inputName.addEventListener('keyup', readForm);
+inputPosition.addEventListener('keyup', readForm);
+
+function updateCard() {
+  updateCardItem('name', 'Nombre Apellido');
+  updateCardItem('position', 'Front End Developer');
+  // updateCardItem('linkedin', 'https://linkeding/in/', 'href');
+  // updateCardItem('github', 'https://github.com/', 'href');
+  // updateCardLink('github', 'https://github.com/', 'href');
+}
+
+function updateCardItem(propertyName, placeholder) {
+  const inputValue = data[propertyName];
+  let cardValue;
+  if (inputValue) {
+    cardValue = inputValue;
+  } else {
+    cardValue = placeholder;
   }
+  document.querySelector('.js-' + propertyName).innerHTML = cardValue;
 }
 
-inputName.addEventListener('keyup', addInfo);
-inputPosition.addEventListener('keyup', addInfo);
+// function updateCardLink(propertyName, placeholder) {
+//     const inputValue = data[propertyName];
+//     let cardValue;
+//     if (inputValue) {
+//         cardValue = inputValue;
+//     } else {
+//         cardValue = placeholder;
+//     }
+//     document.querySelector('.js-' + propertyName).href = cardValue;
+// }
 
 //color-palette
 
-//Guardamos los inputs
-const inputPalette1 = document.querySelector('.js_palette1');
-const inputPalette2 = document.querySelector('.js_palette2');
-const inputPalette3 = document.querySelector('.js_palette3');
 
-//Cuando la llamamos borra las clases de los elementos que se añaden al seleccionar o que ya tenían
+
+//Guardamos los inputs desde design.html
+const inputPalette1 = document.querySelector(".js_palette1");
+const inputPalette2 = document.querySelector(".js_palette2");
+const inputPalette3 = document.querySelector(".js_palette3");
+
+
+
+//Cuando la llamamos borra las clases de los elementos que se añaden al seleccionar o que ya tenían (ahora en card preview)
 function removeClassesFromElement(element, property) {
   element.classList.remove(`js_palette1${property}`);
   element.classList.remove(`js_palette2${property}`);
@@ -81,26 +112,41 @@ inputPalette1.addEventListener('change', changeToPalette);
 inputPalette2.addEventListener('change', changeToPalette);
 inputPalette3.addEventListener('change', changeToPalette);
 
-// media
+// MEDIA
 
 const inputEmail = document.querySelector('.form__email');
 const inputLinkedin = document.querySelector('.form__linkedin');
 const inputGithub = document.querySelector('.form__github');
 const inputPhone = document.querySelector('.form__phone');
 
+function hideIcon(name, inputValue) {
+  const iconContainer = document.querySelector(`.jscontainer-${name}`);
+  console.log(`jscontainer-${name}`);
+  if(inputValue !== "") {
+      iconContainer.classList.remove("hidden-icon");
+    } else {
+      iconContainer.classList.add("hidden-icon");
+    };
+}
+
 function addHref(event) {
   const inputValue = event.target.value;
-  if (event.target.name === 'email') {
-    document.querySelector(
-      '.js-' + event.target.name
-    ).href = `mailto:${inputValue}`;
-  } else if (event.target.name === 'phone') {
-    document.querySelector(
-      '.js-' + event.target.name
-    ).href = `tel:+34${inputValue}`;
-    console.log(`tel:+34${inputValue}`);
-  } else {
-    document.querySelector('.js-' + event.target.name).href = `${inputValue}`;
+  
+  const icon = document.querySelector(
+    ".js-" + event.target.name
+  );
+
+  hideIcon(event.target.name, inputValue);
+
+  if (event.target.name === "email") {
+    icon.href = `mailto:${inputValue}`;
+  } else if(event.target.name==="phone"){
+    icon.href= `tel:+34${inputValue}`;
+  } else if (event.target.name==="linkedin") {
+    icon.href = `https://www.linkedin.com/in/${inputValue}`;
+  } else if (event.target.name==="github"){
+    icon.href = `https://github.com/${inputValue}`;
+
   }
 }
 
@@ -135,8 +181,9 @@ const clearButton = document.querySelector('.js-clear-button');
 
 function handleClearButtonClick() {
   document.querySelector('.js-form').reset();
-  addInfo();
-  // cardPreviewName.innerHTML = "";
+  data.name = '';
+  data.position = '';
+  updateCard();
 }
 
 clearButton.addEventListener('click', handleClearButtonClick);
