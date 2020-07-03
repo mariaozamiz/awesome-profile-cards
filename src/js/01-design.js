@@ -92,7 +92,7 @@ function addClassToElements(elements, classToAdd) {
 //Cambia el color
 function changeToPalette(event) {
   // Cogemos los elementos por clase
-
+  console.log(event.target.className);
   const cardPreviewName = document.querySelector('.js-name');
   const cardPreviewBorderBox = document.querySelector('.js-border-box');
   const cardPreviewIcons = document.querySelectorAll('.js-icon');
@@ -122,6 +122,11 @@ inputPalette2.addEventListener('change', changeToPalette);
 inputPalette3.addEventListener('change', changeToPalette);
 inputPalette4.addEventListener('change', changeToPalette);
 inputPalette5.addEventListener('change', changeToPalette);
+
+//Palette reset
+
+
+
 
 // MEDIA
 
@@ -204,6 +209,14 @@ const clearButton = document.querySelector('.js-clear-button');
 
 function handleClearButtonClick() {
   document.querySelector('.js-form').reset();
+  //Creo una variable que es un objeto. Dentro de ese objeto defino target y classname, que es lo mismo que le pasábamos antes a la función changeToPalette -más abajo-.
+  let defaultPalete = {
+    target: {
+      className: 'js_palette1'
+    }
+  };
+  //Vuelvo a usar dentro de la función de reset esta función que es la que usábamos antes para eliminar y añadir clases, solo que ahora en vez de dejar que identifique el evento automáticamente se lo pasamos "a la fuerza".
+  changeToPalette(defaultPalete);
   data.name = '';
   data.position = '';
 
