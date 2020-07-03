@@ -1,10 +1,18 @@
-console.log('partial 2');
+const collContents = document.querySelectorAll('.js-collapsable');
+const collButtons = document.querySelectorAll('.js-coll');
 
-const collContent = document.querySelector('.js-contentFill');
-const collButton = document.querySelector('.js-coll');
-
-function collForm(event) {
-  collContent.classList.toggle('content');
+function createCollapsibleButtonListeners() {
+  for (let i = 0; i < collButtons.length; i++) {
+    collButtons[i].addEventListener('click', function () {
+      collContents[i].classList.toggle('content');
+    });
+  }
 }
 
-collButton.addEventListener('click', collForm);
+createCollapsibleButtonListeners();
+
+// function collForm(event) {
+//   collContent.classList.toggle('content');
+// }
+
+// collButton.addEventListener('click', collForm);
