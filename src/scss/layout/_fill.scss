@@ -61,6 +61,10 @@
             margin-top: 10px;
         }
 
+
+    &--box {
+      margin-top: 10px;
+      display: flex;
         &--box--button {
             width: 140px;
             height: 30px;
@@ -84,6 +88,13 @@
         flex-direction: column;
         padding-top: 20px;
     }
+
+    &--box--preview {
+      height: 30px;
+      width: 30px;
+      border: 0.5px solid $green-light;
+      cursor: pointer;
+
     &__phone {
         display: flex;
         flex-direction: column;
