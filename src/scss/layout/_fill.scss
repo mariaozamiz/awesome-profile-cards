@@ -1,5 +1,5 @@
 .fill {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: $color-dark-green;
   border-bottom: 1px solid $white-two;
 
@@ -71,18 +71,17 @@
         background-color: $orange;
         cursor: pointer;
       }
-      &--check {
-        height: 30px;
-        width: 30px;
-        border: 0.5px solid $green-light;
-        cursor: pointer;
-      }
+      // &--check {
+      //   height: 30px;
+      //   width: 30px;
+      //   border: 0.5px solid $green-light;
+      //   cursor: pointer;
+      // }
 
       &--preview {
         height: 30px;
         width: 30px;
         border: 0.5px solid $green-light;
-        cursor: pointer;
       }
     }
   }
