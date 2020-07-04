@@ -6,7 +6,6 @@ const shareContainer = document.querySelector('.js-share__section');
 function createCard() {
     event.preventDefault;
     createCardButton.classList.add('createcard__button--inactive');
-    console.log(shareContainer);
     shareContainer.classList.toggle('content');
 }
 
