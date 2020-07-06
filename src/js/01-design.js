@@ -9,22 +9,27 @@ let data = {
 
 const inputName = document.querySelector('.input__name');
 const inputJob = document.querySelector('.input__job');
+const inputEmail = document.querySelector('.form__email');
+const inputLinkedin = document.querySelector('.js-input-linkedin');
+const inputGithub = document.querySelector('.form__github');
+const inputPhone = document.querySelector('.form__phone');
 
 function readForm() {
   data.name = document.querySelector('.js-input-name').value;
   data.job = document.querySelector('.js-input-job').value;
+  data.linkedin = document.querySelector('.js-input-linkedin').value;
 
   updateCard();
 }
 
 inputName.addEventListener('keyup', readForm);
 inputJob.addEventListener('keyup', readForm);
+inputLinkedin.addEventListener('keyup', readForm);
 
 function updateCard() {
   updateCardItem('name', 'Nombre Apellido');
   updateCardItem('job', 'Front End Developer');
-
-  // updateCardItem('linkedin', 'https://linkeding/in/', 'href');
+  updateCardLink('linkedin', 'https://linkeding/in/');
   // updateCardItem('github', 'https://github.com/', 'href');
   // updateCardLink('github', 'https://github.com/', 'href');
 }
@@ -37,20 +42,20 @@ function updateCardItem(propertyName, placeholder) {
   } else {
     cardValue = placeholder;
   }
-
   document.querySelector('.js-' + propertyName).innerHTML = cardValue;
 }
 
-// function updateCardLink(propertyName, placeholder) {
-//     const inputValue = data[propertyName];
-//     let cardValue;
-//     if (inputValue) {
-//         cardValue = inputValue;
-//     } else {
-//         cardValue = placeholder;
-//     }
-//     document.querySelector('.js-' + propertyName).href = cardValue;
-// }
+function updateCardLink(propertyName, prefix) {
+    const inputValue = data[propertyName];
+    let cardValue;
+    if (inputValue) {
+        cardValue = prefix + inputValue;
+    } else {
+        cardValue = '';
+    }
+    document.querySelector('.js-' + propertyName).href = cardValue;
+    hideIcon(propertyName, inputValue)
+}
 
 //color-palette
 
@@ -130,10 +135,6 @@ inputPalette5.addEventListener('change', changeToPalette);
 
 // MEDIA
 
-const inputEmail = document.querySelector('.form__email');
-const inputLinkedin = document.querySelector('.form__linkedin');
-const inputGithub = document.querySelector('.form__github');
-const inputPhone = document.querySelector('.form__phone');
 
 /*<<<<<<< ticket/17
 function addHref(event) {
@@ -160,28 +161,28 @@ function hideIcon(name, inputValue) {
   }
 }
 
-function addHref(event) {
-  const inputValue = event.target.value;
+// function addHref(event) {
+//   const inputValue = event.target.value;
 
-  const icon = document.querySelector('.js-' + event.target.name);
+//   const icon = document.querySelector('.js-' + event.target.name);
 
-  hideIcon(event.target.name, inputValue);
+//   hideIcon(event.target.name, inputValue);
 
-  if (event.target.name === 'email') {
-    icon.href = `mailto:${inputValue}`;
-  } else if (event.target.name === 'phone') {
-    icon.href = `tel:+34${inputValue}`;
-  } else if (event.target.name === 'linkedin') {
-    icon.href = `https://www.linkedin.com/in/${inputValue}`;
-  } else if (event.target.name === 'github') {
-    icon.href = `https://github.com/${inputValue}`;
-  }
-}
+//   if (event.target.name === 'email') {
+//     icon.href = `mailto:${inputValue}`;
+//   } else if (event.target.name === 'phone') {
+//     icon.href = `tel:+34${inputValue}`;
+//   } else if (event.target.name === 'linkedin') {
+//     icon.href = `https://www.linkedin.com/in/${inputValue}`;
+//   } else if (event.target.name === 'github') {
+//     icon.href = `https://github.com/${inputValue}`;
+//   }
+// }
 
-inputEmail.addEventListener('keyup', addHref);
-inputLinkedin.addEventListener('keyup', addHref);
-inputGithub.addEventListener('keyup', addHref);
-inputPhone.addEventListener('keyup', addHref);
+// inputEmail.addEventListener('keyup', addHref);
+// inputLinkedin.addEventListener('keyup', addHref);
+// inputGithub.addEventListener('keyup', addHref);
+// inputPhone.addEventListener('keyup', addHref);
 
 //Collapsable
 
