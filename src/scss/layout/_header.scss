@@ -2,6 +2,11 @@
   display: flex;
   align-items: center;
 
+  &__logosWrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__logo {
     width: 210px;
     height: 100px;
