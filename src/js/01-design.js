@@ -1,37 +1,49 @@
 'use strict';
 
 let data = {
+  palette: '',
   name: '',
   job: '',
+  phone: '',
+  email: '',
+  linkedin: '',
+  github: '',
+  photo: '',
 };
 
 //selectors
 
-const inputName = document.querySelector('.input__name');
-const inputJob = document.querySelector('.input__job');
-const inputEmail = document.querySelector('.form__email');
+const inputName = document.querySelector('.js-input-name');
+const inputJob = document.querySelector('.js-input-job');
+const inputEmail = document.querySelector('.js-input-email');
 const inputLinkedin = document.querySelector('.js-input-linkedin');
-const inputGithub = document.querySelector('.form__github');
-const inputPhone = document.querySelector('.form__phone');
+const inputGithub = document.querySelector('.js-input-github');
+const inputPhone = document.querySelector('.js-input-phone');
 
 function readForm() {
   data.name = document.querySelector('.js-input-name').value;
   data.job = document.querySelector('.js-input-job').value;
+  data.email = document.querySelector('.js-input-email').value;
   data.linkedin = document.querySelector('.js-input-linkedin').value;
-
+  data.github = document.querySelector('.js-input-github').value;
+  data.phone = document.querySelector('.js-input-phone').value;
   updateCard();
 }
 
 inputName.addEventListener('keyup', readForm);
 inputJob.addEventListener('keyup', readForm);
+inputEmail.addEventListener('keyup', readForm);
 inputLinkedin.addEventListener('keyup', readForm);
+inputGithub.addEventListener('keyup', readForm);
+inputPhone.addEventListener('keyup', readForm);
 
 function updateCard() {
   updateCardItem('name', 'Nombre Apellido');
   updateCardItem('job', 'Front End Developer');
-  updateCardLink('linkedin', 'https://linkeding/in/');
-  // updateCardItem('github', 'https://github.com/', 'href');
-  // updateCardLink('github', 'https://github.com/', 'href');
+  updateCardLink('email', 'mailto:');
+  updateCardLink('linkedin', 'https://linkedin.com/in/');
+  updateCardLink('github', 'https://github.com/');
+  updateCardLink('phone', 'tel:+34');
 }
 
 function updateCardItem(propertyName, placeholder) {
@@ -46,15 +58,15 @@ function updateCardItem(propertyName, placeholder) {
 }
 
 function updateCardLink(propertyName, prefix) {
-    const inputValue = data[propertyName];
-    let cardValue;
-    if (inputValue) {
-        cardValue = prefix + inputValue;
-    } else {
-        cardValue = '';
-    }
-    document.querySelector('.js-' + propertyName).href = cardValue;
-    hideIcon(propertyName, inputValue)
+  const inputValue = data[propertyName];
+  let cardValue;
+  if (inputValue) {
+    cardValue = prefix + inputValue;
+  } else {
+    cardValue = '';
+  }
+  document.querySelector('.js-' + propertyName).href = cardValue;
+  hideIcon(propertyName, inputValue);
 }
 
 //color-palette
@@ -130,27 +142,8 @@ inputPalette5.addEventListener('change', changeToPalette);
 
 //Palette reset
 
-
-
-
 // MEDIA
 
-
-/*<<<<<<< ticket/17
-function addHref(event) {
-  const inputValue = event.target.value;
-  if (event.target.name === "email") {
-    document.querySelector(
-      ".js-" + event.target.name
-    ).href = `mailto:${inputValue}`;
-  } else if (event.target.name === "phone") {
-    document.querySelector(
-      ".js-" + event.target.name
-    ).href = `tel:+34${inputValue}`;
-    console.log(`tel:+34${inputValue}`);
-  } else {
-    document.querySelector(".js-" + event.target.name).href = `${inputValue}`;
-=======*/
 function hideIcon(name, inputValue) {
   const iconContainer = document.querySelector(`.jscontainer-${name}`);
   console.log(`jscontainer-${name}`);
@@ -213,8 +206,8 @@ function handleClearButtonClick() {
   //Creo una variable que es un objeto. Dentro de ese objeto defino target y classname, que es lo mismo que le pasábamos antes a la función changeToPalette -más abajo-.
   let defaultPalete = {
     target: {
-      className: 'js_palette1'
-    }
+      className: 'js_palette1',
+    },
   };
   //Vuelvo a usar dentro de la función de reset esta función que es la que usábamos antes para eliminar y añadir clases, solo que ahora en vez de dejar que identifique el evento automáticamente se lo pasamos "a la fuerza".
   changeToPalette(defaultPalete);
