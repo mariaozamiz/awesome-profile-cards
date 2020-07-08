@@ -10,6 +10,7 @@ function updateAll() {
   updateCardLink('phone', 'tel:+34');
   updateCardPalette();
   updateButtonStatus();
+  saveInfo();
 }
 
 updateAll();
