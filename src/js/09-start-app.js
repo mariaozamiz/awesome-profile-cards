@@ -13,3 +13,17 @@ function updateAll() {
 }
 
 updateAll();
+
+
+const url = 'https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/';
+let data = {};
+
+fetch(url, {
+  method: 'POST', // or 'PUT'
+  body: JSON.stringify(data), // data can be `string` or {object}!
+  headers: {
+    'Content-Type': 'application/json'
+  }
+}).then(response => response.json())
+  .catch(error => console.error('Error:', error))
+  .then(info => console.log('Success:', info));
