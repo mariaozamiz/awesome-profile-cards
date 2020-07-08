@@ -14,24 +14,23 @@ function updateButtonStatus() {
 }
 
 function createCard() {
-    event.preventDefault();
-    // fetch(url, {
-    //     method: 'POST', // or 'PUT'
-    //     body: JSON.stringify(data), // data can be `string` or {object}!
-    //     headers:{
-    //       'Content-Type': 'application/json'
-    //     }
-    //   }).then(res => res.json())
-    //   .catch(error => console.error('Error:', error))
-      .then(data => {
-          console.log('Success:', data)
-          document.querySelector('.response__url').innerHTML = data.algo
-          document.querySelector('.js-twitter-btn').href = 'https://twitter.....?url=' + data.algo
-        //   
-      });
-//   createCardButton.classList.add('createcard__button--inactive');
-//   shareContainer.classList.toggle('content');
+  event.preventDefault();
+  // fetch(url, {
+  //     method: 'POST', // or 'PUT'
+  //     body: JSON.stringify(data), // data can be `string` or {object}!
+  //     headers:{
+  //       'Content-Type': 'application/json'
+  //     }
+  //   }).then(res => res.json())
+  //   .catch(error => console.error('Error:', error))
+  // .then(data => {
+  //     console.log('Success:', data)
+  //     document.querySelector('.response__url').innerHTML = data.algo
+  //     document.querySelector('.js-twitter-btn').href = 'https://twitter.....?url=' + data.algo
+  //   //
+  // });
+  //   createCardButton.classList.add('createcard__button--inactive');
+  //   shareContainer.classList.toggle('content');
 }
 
 createCardButton.addEventListener('click', createCard);
-
