@@ -67,6 +67,7 @@ function updateCardItem(propertyName, placeholder) {
 }
 
 function updateCardLink(propertyName, prefix) {
+  // debugger;
   const inputValue = data[propertyName];
   let cardValue;
   if (inputValue) {
@@ -76,6 +77,13 @@ function updateCardLink(propertyName, prefix) {
   }
   document.querySelector('.js-' + propertyName).href = cardValue;
   hideIcon(propertyName, inputValue);
+}
+
+function updateCardLinkOnStart(propertyName, cardValue) {
+  if (cardValue) {
+    document.querySelector('.js-' + propertyName).href = cardValue;
+    hideIcon(propertyName, cardValue);
+  }
 }
 
 //Cuando la llamamos borra las clases de los elementos que se añaden al seleccionar o que ya tenían (ahora en card preview)

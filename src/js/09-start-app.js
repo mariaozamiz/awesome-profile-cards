@@ -1,6 +1,7 @@
 'use strict';
 
 function updateAll(backdata) {
+  console.log('hola');
   // guardo en local storage
   if (backdata) {
     console.log(backdata);
@@ -14,10 +15,22 @@ function updateAll(backdata) {
 
     updateCardItem('name', backdata.name || 'Nombre Apellido');
     updateCardItem('job', backdata.job || 'Front End Developer');
-    updateCardLink('email', backdata.email || 'mailto:');
-    updateCardLink('linkedin', backdata.linkedin || 'https://linkedin.com/in/');
-    updateCardLink('github', backdata.github || 'https://github.com/');
-    updateCardLink('phone', backdata.phone || 'tel:+34');
+    updateCardLinkOnStart(
+      'email',
+      backdata.email && `mailto:${backdata.email}`
+    );
+    updateCardLinkOnStart(
+      'linkedin',
+      backdata.linkedin && `https://linkedin.com/in/${backdata.linkedin}`
+    );
+    updateCardLinkOnStart(
+      'github',
+      backdata.github && `https://github.com/${backdata.github}`
+    );
+    updateCardLinkOnStart(
+      'phone',
+      backdata.phone && `tel:+34${backdata.phone}`
+    );
   } else {
     updateCardItem('name', 'Nombre Apellido');
     updateCardItem('job', 'Front End Developer');
