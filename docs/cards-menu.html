@@ -26,70 +26,62 @@
 
     <main class="main">
       <section class="cardPreview">
-          <div>
-              <button class="cardPreview__clearButton js-clear-button">
-                  <i class="far fa-trash-alt"></i>
-                  RESET
-              </button>
-              <div class="cardPreview__card">
-                  <div class="cardPreview__info js-border-box js_palette1_border_box">
-                      <h1 class="cardPreview__name js-name js_palette1_color">
-                          Nombre Apellido
-                      </h1>
-                      <h2 class="cardPreview__position js-position">
-                          Front-End developer
-                      </h2>
-                  </div>
-                  <div class="cardPreview__profileImage">
-                      <img />
-                  </div>
-                  <div
-                      class="cardPreview__socialMedia js-icon-container js_palette1_border_color"
-                  >
-                      <div
-                          class="cardPreview__socialMediaContainer js-icon-container js_palette1_border_color"
-                      >
-                          <a class="js-phone" href="#">
-                              <i
-                                  class="fas fa-mobile-alt js-icon js_palette1_color"
-                              ></i>
-                          </a>
-                      </div>
-                      <div
-                          class="cardPreview__socialMediaContainer js-icon-container js_palette1_border_color"
-                      >
-                          <a class="js-email" href="#">
-                              <i
-                                  class="fas fa-envelope js-icon js_palette1_color"
-                              ></i>
-                          </a>
-                      </div>
-                      <div
-                          class="cardPreview__socialMediaContainer js-icon-container js_palette1_border_color"
-                      >
-                          <a class="js-linkedin" target="_blank" href="#">
-                              <i
-                                  class="fab fa-linkedin-in js-icon js_palette1_color"
-                              ></i>
-                          </a>
-                      </div>
-                      <div
-                          class="cardPreview__socialMediaContainer js-icon-container js_palette1_border_color"
-                      >
-                          <a class="js-github" target="_blank" href="#">
-                              <i
-                                  class="fab fa-github-alt js-icon js_palette1_color"
-                              ></i>
-                          </a>
-                      </div>
-                  </div>
+        <div>
+          <button class="cardPreview__clearButton js-clear-button">
+            <i class="far fa-trash-alt"></i>
+            RESET
+          </button>
+          <div class="cardPreview__card">
+            <div class="cardPreview__info js-border-box js_palette1_border_box">
+              <h1 class="cardPreview__name js-name js_palette1_color">
+                Nombre Apellido
+              </h1>
+              <h2 class="cardPreview__position js-job">
+                Front-End developer
+              </h2>
+            </div>
+            <div class="cardPreview__profileImage js__profile-image">
+              <img />
+            </div>
+            <div
+              class="cardPreview__socialMedia js-icon-container js_palette1_border_color"
+            >
+              <div
+                class="cardPreview__socialMediaContainer js-icon-container jscontainer-email js_palette1_border_color hidden-icon"
+              >
+                <a class="js-email" href="#">
+                  <i class="fas fa-envelope js-icon js_palette1_color"></i>
+                </a>
               </div>
+              <div
+                class="cardPreview__socialMediaContainer js-icon-container jscontainer-phone js_palette1_border_color hidden-icon"
+              >
+                <a class="js-phone" href="#">
+                  <i class="fas fa-mobile-alt js-icon js_palette1_color"></i>
+                </a>
+              </div>
+              <div
+                class="cardPreview__socialMediaContainer js-icon-container jscontainer-linkedin js_palette1_border_color hidden-icon"
+              >
+                <a class="js-linkedin" target="_blank" href="#">
+                  <i class="fab fa-linkedin-in js-icon js_palette1_color"></i>
+                </a>
+              </div>
+              <div
+                class="cardPreview__socialMediaContainer js-icon-container jscontainer-github js_palette1_border_color hidden-icon"
+              >
+                <a class="js-github" target="_blank" href="#">
+                  <i class="fab fa-github-alt js-icon js_palette1_color"></i>
+                </a>
+              </div>
+            </div>
           </div>
+        </div>
       </section>
 
-      <form class="js-form">
+      <form class="form__section js-form">
         <section class="design wrapper">
-          <div class="design__section">
+          <div class="design__section js-coll">
             <div class="desgin__section--box">
               <i class="far fa-clone"></i>
               <h2 class="design__section--title">Diseña</h2>
@@ -107,7 +99,7 @@
                 <div class="designform__palette1">
                   <input
                     class="js_palette1"
-                    id="palette1"
+                    id="1"
                     type="radio"
                     value="palette1"
                     name="paletteoptions"
@@ -117,7 +109,7 @@
                 <div class="designform__palette2">
                   <input
                     class="js_palette2"
-                    id="palette2"
+                    id="2"
                     type="radio"
                     value="palette2"
                     name="paletteoptions"
@@ -127,9 +119,27 @@
                 <div class="designform__palette3">
                   <input
                     class="js_palette3"
-                    id="palette3"
+                    id="3"
                     type="radio"
                     value="palette3"
+                    name="paletteoptions"
+                  />
+                </div>
+                <div class="designform__palette4">
+                  <input
+                    class="js_palette4"
+                    id="4"
+                    type="radio"
+                    value="palette4"
+                    name="paletteoptions"
+                  />
+                </div>
+                <div class="designform__palette5">
+                  <input
+                    class="js_palette5"
+                    id="5"
+                    type="radio"
+                    value="palette5"
                     name="paletteoptions"
                   />
                 </div>
@@ -142,18 +152,24 @@
                 <div class="designform__color7"></div>
                 <div class="designform__color8"></div>
                 <div class="designform__color9"></div>
+                <div class="designform__color10"></div>
+                <div class="designform__color11"></div>
+                <div class="designform__color12"></div>
+                <div class="designform__color13"></div>
+                <div class="designform__color14"></div>
+                <div class="designform__color15"></div>
               </div>
             </fieldset>
           </div>
         </section>
 
         <section class="fill wrapper">
-          <div class="fill__section">
+          <div class="fill__section js-coll">
             <div class="fill__section--box">
               <i class="fa fa-keyboard-o fill__section--img" aria-hidden="true"></i>
               <h2 class="fill__section--title">rellena</h2>
             </div>
-            <i class="fas fa-chevron-down fill__section--img2 js-coll"></i>
+            <i class="fas fa-chevron-down fill__section--img2"></i>
           </div>
           <div class="form content js-contentFill js-collapsable">
             <fieldset>
@@ -171,10 +187,10 @@
               <div class="form__job">
                 <label for="job">Puesto</label>
                 <input
-                  class="input__position js-input-position"
+                  class="input__job js-input-job"
                   type="text"
-                  id="position"
-                  name="position"
+                  id="job"
+                  name="job"
                   placeholder="Ej: Front-end developer"
                   required
                 />
@@ -182,15 +198,21 @@
               <div class="form__img">
                 <label for="img">Imagen de perfil</label>
                 <div class="form__img--box">
-                  <button class="form__img--box--button" type="button">
+                  <buttonxfbi
+                    class="form__img--box--button js__profile-trigger"
+                    type="button"
+                  >
                     Añadir imagen
-                  </button>
+                  </buttonxfbi>
                   <input
-                    class="form__img--box--check"
+                    class="form__img--box--check action__hiddenField js__profile-upload-btn"
                     id="imgOption"
-                    type="check"
+                    type="file"
                     name="imgOptions"
                   />
+                  <div
+                    class="form__img--box--preview profile__preview js__profile-preview"
+                  ></div>
                 </div>
               </div>
             </fieldset>
@@ -243,26 +265,41 @@
 
         <!-- closed TAB -->
         <section class="share wrapper">
-          <div class="share__tab js-collapsable">
-            <div class="share__tab--description">
-              <i class="fas fa-share-alt tab__image"></i>
-              <h2 class="tab__text">comparte</h2>
+            <div class="share__tab js-coll">
+                <div class="share__tab--description">
+                    <i class="fas fa-share-alt tab__image"></i>
+                    <h2 class="tab__text">Comparte</h2>
+                </div>
+                <i class="fas fa-chevron-down tab__icon"></i>
             </div>
-            <i class="fas fa-chevron-down tab__icon"></i>
-          </div>
-          <!-- opened TAB -->
-          <button class="form__button form__button--active">
-            <i class="far fa-address-card"></i>crear tarjeta
-          </button>
+            <div class="js-collapsable">
+                <!-- opened TAB -->
+                <div class="createcard__button--container">
+                    <button
+                        type="submit"
+                        class="createcard__button js-createcard__button"
+                    >
+                        <div class="createcard__button--icon">
+                            <i class="far fa-address-card"></i>
+                        </div>
+                        <span class="createcard__button--icon">Crear tarjeta</span>
+                    </button>
+                </div>
+            </div>
         </section>
         <!--opened TAB + action button -->
 
-        <section class="notification wrapper">
-          <p>La tarjeta ha sido creada:</p>
-          <p class="response__url">https://awesome-profile-card.com?id=A456DF0001</p>
-          <button class="share__button">
-            <i class="fab fa-twitter share__icon"></i>Compartir en twitter
-          </button>
+        <section class="notification wrapper content js-share__section">
+            <p>La tarjeta ha sido creada:</p>
+            <p class="response__url">https://awesome-profile-card.com?id=A456DF0001</p>
+            <button class="share__button js-share__button">
+                <div class="share__button--icon">
+                    <i class="fab fa-twitter share__icon"></i>
+                </div>
+                <span class="share__button--text">
+                    Compartir en twitter
+                </span>
+            </button>
         </section>
 
       </form>
