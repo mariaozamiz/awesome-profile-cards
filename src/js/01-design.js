@@ -48,6 +48,7 @@ inputEmail.addEventListener('keyup', readForm);
 inputLinkedin.addEventListener('keyup', readForm);
 inputGithub.addEventListener('keyup', readForm);
 inputPhone.addEventListener('keyup', readForm);
+
 inputPalette1.addEventListener('change', readForm);
 inputPalette2.addEventListener('change', readForm);
 inputPalette3.addEventListener('change', readForm);
