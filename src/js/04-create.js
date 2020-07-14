@@ -6,7 +6,7 @@ const url = 'https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/';
 
 const testObject = {
   palette: 1,
-  name: 'María data-',
+  name: 'María',
   job: 'Front-end developer',
   phone: '+34 666666666',
   email: 'mariagar@example.com',
@@ -29,7 +29,7 @@ function createCard() {
   event.preventDefault();
   fetch(url, {
     method: 'POST',
-    body: JSON.stringify(testObject),
+    body: JSON.stringify(data),
     headers: {
       'Content-type': 'application/json',
     },

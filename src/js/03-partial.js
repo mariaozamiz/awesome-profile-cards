@@ -14,6 +14,8 @@ const profilePreview = document.querySelector('.js__profile-preview');
  * al tener los datos listos
  * @param {evento} e
  */
+
+let imgcurrent = '';
 function getImage(e) {
   const myFile = e.currentTarget.files[0];
   fr.addEventListener('load', writeImage);
@@ -30,15 +32,22 @@ function writeImage() {
    * podemos pasarlo como background a la imagen de perfil y a la vista previa
    * de nuestro componente.
    */
-  if (data.photo !== '') {
-    profileImage.style.backgroundImage = data.photo;
-    profilePreview.style.backgroundImage = data.photo;
-  } else if (fr.result) {
+  if (data.photo !== '' || fr.result) {
     profileImage.style.backgroundImage = `url(${fr.result})`;
     profilePreview.style.backgroundImage = `url(${fr.result})`;
-    data.photo = `url(${fr.result})`;
+    data.photo = fr.result;
     saveInfo();
   }
+}
+
+function resetImage() {
+  /* En la propiedad `result` de nuestro FR se almacena
+   * el resultado. Ese resultado de procesar el fichero que hemos cargado
+   * podemos pasarlo como background a la imagen de perfil y a la vista previa
+   * de nuestro componente.
+   */
+  profileImage.style.backgroundImage = `url('../images/profile-image.jpg');`;
+  profilePreview.style.backgroundImage = `url('../images/profile-image.jpg')`;
 }
 
 /**

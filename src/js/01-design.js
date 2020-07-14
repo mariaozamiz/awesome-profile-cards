@@ -1,7 +1,7 @@
 'use strict';
 
 let data = {
-  palette: '1',
+  palette: 1,
   name: '',
   job: '',
   phone: '',
@@ -35,10 +35,9 @@ function readForm() {
   data.linkedin = document.querySelector('.js-input-linkedin').value;
   data.github = document.querySelector('.js-input-github').value;
   data.phone = document.querySelector('.js-input-phone').value;
-  data.palette = document.querySelector(
-    'input[name=paletteoptions]:checked'
-  ).id;
-
+  data.palette = parseInt(
+    document.querySelector('input[name=paletteoptions]:checked').id
+  );
   // pausa
   updateAll();
 }
@@ -166,7 +165,10 @@ function handleClearButtonClick() {
   document.querySelector('.js-form').reset();
   //Creo una variable que es un objeto. Dentro de ese objeto defino target y classname, que es lo mismo que le pasábamos antes a la función updateCardPalette -más abajo-.
   //Vuelvo a usar dentro de la función de reset esta función que es la que usábamos antes para eliminar y añadir clases, solo que ahora en vez de dejar que identifique el evento automáticamente se lo pasamos "a la fuerza".
-  data.palette = '1';
+
+  resetImage();
+
+  data.palette = 1;
   data.name = '';
   data.job = '';
   data.phone = '';

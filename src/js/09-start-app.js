@@ -10,15 +10,15 @@ function updateAll(backdata) {
     inputGithub.value = backdata.github;
     inputPhone.value = backdata.phone;
 
-    if (backdata.palette === '1') {
+    if (backdata.palette === 1) {
       inputPalette1.checked = true;
-    } else if (backdata.palette === '2') {
+    } else if (backdata.palette === 2) {
       inputPalette2.checked = true;
-    } else if (backdata.palette === '3') {
+    } else if (backdata.palette === 3) {
       inputPalette3.checked = true;
-    } else if (backdata.palette === '4') {
+    } else if (backdata.palette === 4) {
       inputPalette4.checked = true;
-    } else if (backdata.palette === '5') {
+    } else if (backdata.palette === 5) {
       inputPalette5.checked = true;
     }
 

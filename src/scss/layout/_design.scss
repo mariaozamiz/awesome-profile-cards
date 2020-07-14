@@ -52,30 +52,40 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+    align-self: center;
+    justify-self: center;
   }
   &__palette2 {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
+    align-self: center;
+    justify-self: center;
   }
   &__palette3 {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
+    align-self: center;
+    justify-self: center;
   }
   &__palette4 {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 4;
     grid-row-end: 5;
+    align-self: center;
+    justify-self: center;
   }
   &__palette5 {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 5;
     grid-row-end: 6;
+    align-self: center;
+    justify-self: center;
   }
   &__color1 {
     background-color: $color-dark-green;
