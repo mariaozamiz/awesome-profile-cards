@@ -26,7 +26,7 @@ function updateAll(backdata) {
     //   backdata.palette = '';
     // }
 
-    updateCardPalette();
+    updateCardPalette(backdata.palette);
     updateCardItem('name', backdata.name || 'Nombre Apellido');
     updateCardItem('job', backdata.job || 'Front End Developer');
     updateCardLinkOnStart(
@@ -45,6 +45,7 @@ function updateAll(backdata) {
       'phone',
       backdata.phone && `tel:+34${backdata.phone}`
     );
+    writeImage();
   } else {
     updateCardItem('name', 'Nombre Apellido');
     updateCardItem('job', 'Front End Developer');
@@ -59,4 +60,5 @@ function updateAll(backdata) {
 }
 
 const backdata = getInfo();
+data = backdata ? backdata : data;
 updateAll(backdata);

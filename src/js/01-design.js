@@ -38,6 +38,7 @@ function readForm() {
   data.palette = document.querySelector(
     'input[name=paletteoptions]:checked'
   ).id;
+
   // pausa
   updateAll();
 }
@@ -110,7 +111,7 @@ function addClassToElements(elements, classToAdd) {
 }
 
 //Cambia el color
-function updateCardPalette() {
+function updateCardPalette(backdataPalette) {
   // Cogemos los elementos por clase
   const cardPreviewName = document.querySelector('.js-name');
   const cardPreviewBorderBox = document.querySelector('.js-border-box');
@@ -126,7 +127,8 @@ function updateCardPalette() {
   removeClassesFromElements(cardPreviewIconsContainer, '_border_color');
 
   //Añadimos las clases basándonos en la clase del checkbox que se seleccionó
-  const radioClassName = 'js_palette' + backdata.palette || data.palette;
+  const radioClassName = `js_palette${backdataPalette || data.palette}`;
+
   cardPreviewName.classList.add(`${radioClassName}_color`);
   cardPreviewBorderBox.classList.add(`${radioClassName}_border_box`);
   addClassToElements(cardPreviewIcons, `${radioClassName}_color`);

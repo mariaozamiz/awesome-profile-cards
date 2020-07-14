@@ -30,8 +30,15 @@ function writeImage() {
    * podemos pasarlo como background a la imagen de perfil y a la vista previa
    * de nuestro componente.
    */
-  profileImage.style.backgroundImage = `url(${fr.result})`;
-  profilePreview.style.backgroundImage = `url(${fr.result})`;
+  if (data.photo !== '') {
+    profileImage.style.backgroundImage = data.photo;
+    profilePreview.style.backgroundImage = data.photo;
+  } else if (fr.result) {
+    profileImage.style.backgroundImage = `url(${fr.result})`;
+    profilePreview.style.backgroundImage = `url(${fr.result})`;
+    data.photo = `url(${fr.result})`;
+    saveInfo();
+  }
 }
 
 /**
