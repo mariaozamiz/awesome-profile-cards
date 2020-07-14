@@ -1,7 +1,6 @@
 'use strict';
 
 function updateAll(backdata) {
-  console.log('hola');
   // guardo en local storage
   if (backdata) {
     console.log(backdata);
@@ -12,7 +11,8 @@ function updateAll(backdata) {
     inputLinkedin.value = backdata.linkedin;
     inputGithub.value = backdata.github;
     inputPhone.value = backdata.phone;
-    // updateCardPalette(parseInt(backdata.palette));
+    data.palette = backdata.palette;
+    updateCardPalette();
     updateCardItem('name', backdata.name || 'Nombre Apellido');
     updateCardItem('job', backdata.job || 'Front End Developer');
     updateCardLinkOnStart(
@@ -45,4 +45,5 @@ function updateAll(backdata) {
 }
 
 const backdata = getInfo();
+// data = backdata;
 updateAll(backdata);
