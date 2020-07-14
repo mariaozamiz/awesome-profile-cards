@@ -1,7 +1,6 @@
 'use strict';
 
 function updateAll(backdata) {
-  console.log('hola');
   // guardo en local storage
   if (backdata) {
     inputName.value = backdata.name;
