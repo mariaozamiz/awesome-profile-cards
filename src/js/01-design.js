@@ -136,8 +136,6 @@ function updateCardPalette() {
   );
 }
 
-//Palette reset
-
 // MEDIA
 
 function hideIcon(name, inputValue) {

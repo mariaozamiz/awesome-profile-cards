@@ -12,7 +12,7 @@ function updateAll(backdata) {
     inputLinkedin.value = backdata.linkedin;
     inputGithub.value = backdata.github;
     inputPhone.value = backdata.phone;
-
+    // updateCardPalette(parseInt(backdata.palette));
     updateCardItem('name', backdata.name || 'Nombre Apellido');
     updateCardItem('job', backdata.job || 'Front End Developer');
     updateCardLinkOnStart(
