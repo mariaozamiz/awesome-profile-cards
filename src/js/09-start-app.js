@@ -45,5 +45,4 @@ function updateAll(backdata) {
 }
 
 const backdata = getInfo();
-// data = backdata;
 updateAll(backdata);

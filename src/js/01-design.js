@@ -110,7 +110,17 @@ function addClassToElements(elements, classToAdd) {
 }
 
 //Cambia el color
-function updateCardPalette() {
+// function updateCardPalette() {
+//   if (backdata.palette) {
+//     data.palette = document.querySelector(
+//       'input[name=paletteoptions]:checked'
+//     ).id;
+//   }
+
+  data.palette = document.querySelector(
+    'input[name=paletteoptions]:checked'
+  ).id;
+
   // Cogemos los elementos por clase
   const cardPreviewName = document.querySelector('.js-name');
   const cardPreviewBorderBox = document.querySelector('.js-border-box');
