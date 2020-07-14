@@ -126,7 +126,7 @@ function updateCardPalette() {
   removeClassesFromElements(cardPreviewIconsContainer, '_border_color');
 
   //Añadimos las clases basándonos en la clase del checkbox que se seleccionó
-  const radioClassName = 'js_palette' + data.palette;
+  const radioClassName = 'js_palette' + backdata.palette || data.palette;
   cardPreviewName.classList.add(`${radioClassName}_color`);
   cardPreviewBorderBox.classList.add(`${radioClassName}_border_box`);
   addClassToElements(cardPreviewIcons, `${radioClassName}_color`);
