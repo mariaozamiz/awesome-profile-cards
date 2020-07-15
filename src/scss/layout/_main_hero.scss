@@ -13,13 +13,20 @@
   }
 }
 .img-main-hero {
-  width: 250px;
-  height: 63px;
-  margin-bottom: 35.4px;
+  width: 200px;
+  height: 105px;
+  margin-bottom: 20px;
   @include tablet {
-    width: 419px;
+    width: 200px;
     height: 105px;
     flex-shrink: 0;
+  }
+}
+
+.img-main-hero-futuramas {
+  width: 400px;
+  @include tablet {
+    width: 450px;
   }
 }
 
@@ -86,9 +93,9 @@
 .span-text {
   font-size: 12.8px;
   color: $color-font-grey;
-  font-family:$font-start-main;
-  @include tablet{
-    font-size:16px;
+  font-family: $font-start-main;
+  @include tablet {
+    font-size: 16px;
   }
 }
 .icon-square {
@@ -101,7 +108,7 @@
 .start-button {
   width: 129px;
   height: 42px;
-  background-color: $blue;
+  background-color: $orange;
   border-radius: 21px;
   color: white;
   text-transform: uppercase;
