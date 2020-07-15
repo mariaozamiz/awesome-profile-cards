@@ -46,8 +46,8 @@ function resetImage() {
    * podemos pasarlo como background a la imagen de perfil y a la vista previa
    * de nuestro componente.
    */
-  profileImage.style.backgroundImage = `url('../images/profile-image.jpg');`;
-  profilePreview.style.backgroundImage = `url('../images/profile-image.jpg')`;
+  profileImage.style.backgroundImage = `url('assets/images/profile-image.jpg')`;
+  profilePreview.style.backgroundImage = `url('assets/images/profile-image.jpg')`;
 }
 
 /**

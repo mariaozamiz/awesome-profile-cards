@@ -166,8 +166,6 @@ function handleClearButtonClick() {
   //Creo una variable que es un objeto. Dentro de ese objeto defino target y classname, que es lo mismo que le pasábamos antes a la función updateCardPalette -más abajo-.
   //Vuelvo a usar dentro de la función de reset esta función que es la que usábamos antes para eliminar y añadir clases, solo que ahora en vez de dejar que identifique el evento automáticamente se lo pasamos "a la fuerza".
 
-  resetImage();
-
   data.palette = 1;
   data.name = '';
   data.job = '';
@@ -177,6 +175,7 @@ function handleClearButtonClick() {
   data.github = '';
   data.photo = '';
   updateAll();
+  resetImage();
 }
 
 clearButton.addEventListener('click', handleClearButtonClick);
