@@ -5,5 +5,6 @@ function saveInfo() {
 }
 
 function getInfo() {
-  return JSON.parse(localStorage.getItem('data'));
+  const data = JSON.parse(localStorage.getItem('data'));
+  return data;
 }

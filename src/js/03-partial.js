@@ -33,9 +33,13 @@ function writeImage() {
    * de nuestro componente.
    */
   if (data.photo !== '' || fr.result) {
-    profileImage.style.backgroundImage = `url(${fr.result})`;
-    profilePreview.style.backgroundImage = `url(${fr.result})`;
-    data.photo = fr.result;
+    profileImage.style.backgroundImage = `url(${data.photo || fr.result})`;
+    profilePreview.style.backgroundImage = `url(${data.photo || fr.result})`;
+
+    if (fr.result) {
+      data.photo = fr.result;
+    }
+
     saveInfo();
   }
 }

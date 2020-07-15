@@ -3,6 +3,7 @@
 function updateAll(backdata) {
   // guardo en local storage
   if (backdata) {
+    console.log(backdata);
     inputName.value = backdata.name;
     inputJob.value = backdata.job;
     inputEmail.value = backdata.email;
@@ -21,10 +22,6 @@ function updateAll(backdata) {
     } else if (backdata.palette === 5) {
       inputPalette5.checked = true;
     }
-
-    // if (data.palette !== backdata.palette) {
-    //   backdata.palette = '';
-    // }
 
     updateCardPalette(backdata.palette);
     updateCardItem('name', backdata.name || 'Nombre Apellido');
