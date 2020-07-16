@@ -67,7 +67,6 @@ function updateCardItem(propertyName, placeholder) {
 }
 
 function updateCardLink(propertyName, prefix) {
-  // debugger;
   const inputValue = data[propertyName];
   let cardValue;
   if (inputValue) {
