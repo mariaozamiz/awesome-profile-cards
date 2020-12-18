@@ -3,7 +3,6 @@
 function updateAll(backdata) {
   // guardo en local storage
   if (backdata) {
-    console.log(backdata);
     inputName.value = backdata.name;
     inputJob.value = backdata.job;
     inputEmail.value = backdata.email;
@@ -24,8 +23,8 @@ function updateAll(backdata) {
     }
 
     updateCardPalette(backdata.palette);
-    updateCardItem('name', backdata.name || 'Nombre Apellido');
-    updateCardItem('job', backdata.job || 'Front End Developer');
+    updateCardItem('name', backdata.name || defaultName);
+    updateCardItem('job', backdata.job || defaultPosition);
     updateCardLinkOnStart(
       'email',
       backdata.email && `mailto:${backdata.email}`
@@ -44,8 +43,8 @@ function updateAll(backdata) {
     );
     writeImage();
   } else {
-    updateCardItem('name', 'Nombre Apellido');
-    updateCardItem('job', 'Front End Developer');
+    updateCardItem('name', defaultName);
+    updateCardItem('job', defaultPosition);
     updateCardLink('email', 'mailto:');
     updateCardLink('linkedin', 'https://linkedin.com/in/');
     updateCardLink('github', 'https://github.com/');

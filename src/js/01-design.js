@@ -11,8 +11,10 @@ let data = {
   photo: '',
 };
 
-//selectors
-// seleccionamos los campos del formulario
+const defaultName = 'Leela Turanga';
+const defaultPosition = 'Piloto en Planet Express';
+
+//form selectors
 
 const inputName = document.querySelector('.js-input-name');
 const inputJob = document.querySelector('.js-input-job');
@@ -26,7 +28,7 @@ const inputPalette3 = document.querySelector('.js_palette3');
 const inputPalette4 = document.querySelector('.js_palette4');
 const inputPalette5 = document.querySelector('.js_palette5');
 
-// rellenamos el objeto con el valor de los input del formulario
+// read user inputs and update data
 
 function readForm() {
   data.name = document.querySelector('.js-input-name').value;
@@ -38,7 +40,6 @@ function readForm() {
   data.palette = parseInt(
     document.querySelector('input[name=paletteoptions]:checked').id
   );
-  // pausa
   updateAll();
 }
 
