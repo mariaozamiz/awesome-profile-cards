@@ -13,20 +13,12 @@
   }
 }
 .img-main-hero {
-  width: 200px;
-  height: 105px;
+  width: 100%;
   margin-bottom: 20px;
   @include tablet {
     width: 200px;
     height: 105px;
     flex-shrink: 0;
-  }
-}
-
-.img-main-hero-futuramas {
-  width: 400px;
-  @include tablet {
-    width: 450px;
   }
 }
 
@@ -55,7 +47,7 @@
 .icons-box {
   width: 268px;
   height: 73.8px;
-  border: 1.6px solid $orange-transparent;
+  border: 1.6px solid #a2deaf;
   border-radius: 4px;
   display: flex;
   flex-direction: row;

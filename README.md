@@ -1,37 +1,50 @@
-# Proyecto Modulo 2 - "Awesome Cards" - Equipo 3: FuturAmas del code
+# Awesome Profile Cards
 
-¡Hola! Este es el proyecto "Awesome Cards" del equipo 3, formado por Alba San Martín, Ana López, Christina Lorenzo, Sara Alite y María Ozámiz, ¡futuras **amas** del código!
+Esta Web App crea tarjetas de visita personalizadas e interactivas para compartir en redes sociales.
 
-## Especificaciones
+![Captura de pantalla](https://github.com/mariaozamiz/awesome-profile-cards/blob/master/src/images/captura_pantalla.png)
 
--   En el desarrollo de esta aplicación web usaremos las siguientes tecnologías:
+Este proyecto ha sido creado por **Futuramas del Code**, un equipo formado por [Alba San Martín](https://github.com/albasmg), [Ana López](https://github.com/Analo-pez), [Christina Lorenzo](https://github.com/Cristinalorenzomontes), [Sara Alite](https://github.com/saraalite) y [María Ozámiz](https://www.linkedin.com/in/mariaozamiz/), ¡futuras **amas** del código!
 
--   Uso avanzado de formularios HTML
 
--   Maquetación usando CSS avanzado, como flex y grid
+## Instalación
 
--   Uso de mediaqueries para que el diseño sea adaptable al dispositivo usando la estrategia mobile first
+1. Descarga el repositorio.
+2. Instala las dependencias con ```npm install```.
+3. Arranca el proyecto con ```npm start```.
 
--   Gestión de eventos en el navegador (al hacer click, pasa x, etc.)
 
--   Acceso y envío de datos a un servidor
+## Tecnologías utilizadas
 
--   Almacenamiento en local usando LocalStorage
+- Vanilla JavaScript, DOM avanzado, HTML y CSS (Sass)
+- Gulp, [Adalab Web Starter Kit](https://github.com/Adalab/adalab-web-starter-kit)
 
--   Uso de git para el control de versiones del proyecto
 
--   Publicación del resultado en Internet usando GitHub Pages
+## Características
 
--   El proyecto consta de 2 páginas:
+### Diseña
 
--   Una página landing de bienvenida
+- La aplicación permite a la persona usuaria definir el estilo de la tarjeta, eligiendo entre una paleta de color más tradicional o una inspirada en la serie "Futurama". Los efectos de color pueden observarse en la previsualización de la tarjeta en tiempo real.
 
--   Una página con la aplicación de crear tarjetas
+### Rellena
 
--   La aplicación funciona siguiendo estos pasos:
+- Al introducir la información personal en el formulario, esta aparecerá maquetada automáticamente en la previsualización.
+  
+- Es posible subir una fotografía.
+  
+- Los enlaces a redes sociales tomarán forma de iconos interactivos bajo la fotografía.
 
-    1. Permitir al usuario elegir el estilo de la tarjeta, eligiendo paleta de colores
+### Comparte
 
-    2. Permitir al usuario que, mediante la introducción de información en un formulario, este texto se muestre maquetado automáticamente en un cuadro similar a una tarjeta de visita, que será la muestra del resultado final
+- Una vez los datos estén completos, la aplicación permite publicar en Twitter nuestra tarjeta para comenzar a hacer nuevos contactos.
 
-    3. Permitir que el usuario pueda crear una web con su tarjeta y compartirla por Twitter
+<!-- 
+### Diseño responsive, mobile first! 📱
+  
+### Uso avanzado de formularios HTML 📋
+
+### Gestión de eventos en el navegador ⌨️
+
+### Almacenamiento de datos en LocalStorage 🗄️ -->
+
+
