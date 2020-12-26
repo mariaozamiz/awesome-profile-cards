@@ -27,6 +27,7 @@ const inputPalette2 = document.querySelector('.js_palette2');
 const inputPalette3 = document.querySelector('.js_palette3');
 const inputPalette4 = document.querySelector('.js_palette4');
 const inputPalette5 = document.querySelector('.js_palette5');
+const radioButtons = document.querySelectorAll('[type="radio"]');
 
 // read user inputs and update data
 
@@ -37,9 +38,7 @@ function readForm() {
   data.linkedin = document.querySelector('.js-input-linkedin').value;
   data.github = document.querySelector('.js-input-github').value;
   data.phone = document.querySelector('.js-input-phone').value;
-  data.palette = parseInt(
-    document.querySelector('input[name=paletteoptions]:checked').id
-  );
+  data.palette = parseInt(this.id);
   updateAll();
 }
 
@@ -49,12 +48,7 @@ inputEmail.addEventListener('keyup', readForm);
 inputLinkedin.addEventListener('keyup', readForm);
 inputGithub.addEventListener('keyup', readForm);
 inputPhone.addEventListener('keyup', readForm);
-
-inputPalette1.addEventListener('change', readForm);
-inputPalette2.addEventListener('change', readForm);
-inputPalette3.addEventListener('change', readForm);
-inputPalette4.addEventListener('change', readForm);
-inputPalette5.addEventListener('change', readForm);
+radioButtons.forEach((button) => button.addEventListener('change', readForm));
 
 function updateCardItem(propertyName, placeholder) {
   const inputValue = data[propertyName];
