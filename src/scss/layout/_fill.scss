@@ -66,12 +66,14 @@
         width: 140px;
         height: 30px;
         text-align: center;
-        padding-top: 5px;
+        vertical-align: middle;
+        padding-bottom: 1px;
         color: white;
         border-radius: 5px;
         border-style: none;
         background-color: $orange;
         cursor: pointer;
+        margin-right: 6px;
       }
 
       &--preview {
