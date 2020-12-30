@@ -5,6 +5,49 @@ const uploadBtn = document.querySelector('.js__profile-trigger');
 const fileField = document.querySelector('.js__profile-upload-btn');
 const profileImage = document.querySelector('.js__profile-image');
 const profilePreview = document.querySelector('.js__profile-preview');
+const cameraButton = document.querySelector('.js__camera-button');
+const takePicButton = document.querySelector('.button_take-picture');
+const designSectionColl = document.querySelector('.designform.js-collapsable');
+const video = document.querySelector('.js-video');
+const canvas = document.querySelector('.canvas');
+const ctx = canvas.getContext('2d');
+let cameraStream;
+
+function startPhotoBooth() {
+  // if (screen.width < 768) {
+  //   designSectionColl.classList.add('content');
+  //   window.scrollTo(0, 0);
+  // }
+  navigator.mediaDevices
+    .getUserMedia({ video: true, audio: false })
+    .then((localMediaStream) => {
+      cameraStream = localMediaStream;
+      video.classList.remove('content');
+      video.srcObject = localMediaStream;
+      video.play();
+    })
+    .catch((error) => {
+      window.alert('¡Lo siento! No hemos conseguido acceder a tu cámara');
+      console.log(error);
+    });
+  takePicButton.classList.remove('content');
+}
+
+function savePicture() {
+  console.log('¡patata!');
+  const width = video.videoWidth;
+  const height = video.videoHeight;
+  canvas.width = width;
+  canvas.height = height;
+  ctx.drawImage(video, 0, 0, width, height);
+  const data = canvas.toDataURL('image/jpeg');
+  profileImage.style.backgroundImage = `url(${data})`;
+  profilePreview.style.backgroundImage = `url(${data})`;
+  video.classList.add('content');
+  takePicButton.classList.add('content');
+  cameraStream.getTracks()[0].stop();
+  cameraStream = false;
+}
 
 /**
  * Recoge el archivo añadido al campo de tipo "file"
@@ -34,7 +77,7 @@ function writeImage() {
    */
   if (data.photo !== '' || fr.result) {
     profileImage.style.backgroundImage = `url(${data.photo || fr.result})`;
-    profilePreview.style.backgroundImage = `url(${data.photo || fr.result})`;
+    profilePreview.style.backgroundImage = `url(${data.photo})`;
 
     if (fr.result) {
       data.photo = fr.result;
@@ -69,3 +112,5 @@ function fakeFileClick() {
  */
 uploadBtn.addEventListener('click', fakeFileClick);
 fileField.addEventListener('change', getImage);
+cameraButton.addEventListener('click', startPhotoBooth);
+takePicButton.addEventListener('click', savePicture);
