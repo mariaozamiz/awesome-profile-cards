@@ -1,10 +1,12 @@
 # Awesome Profile Cards
 
-Esta Web App crea tarjetas de visita personalizadas e interactivas para compartir en redes sociales.
+Esta Web App inspirada en la serie de animación Futurama, crea tarjetas de visita personalizadas e interactivas para compartir en redes sociales.
+
+👉 En este **fork** quiero añadir una **nueva funcionalidad** al proyecto original: además de subir tu foto, ¡ahora también podrás sacarte una *selfie* en el momento! 📸 También estoy refactorizando algunas partes del código a medida que aprendo nuevas expresiones 🤓.
 
 ![Captura de pantalla](https://github.com/mariaozamiz/awesome-profile-cards/blob/master/src/images/captura_pantalla.png)
 
-Este proyecto ha sido creado por **Futuramas del Code**, un equipo formado por [Alba San Martín](https://github.com/albasmg), [Ana López](https://github.com/Analo-pez), [Christina Lorenzo](https://github.com/Cristinalorenzomontes), [Sara Alite](https://github.com/saraalite) y [María Ozámiz](https://www.linkedin.com/in/mariaozamiz/), ¡futuras **amas** del código!
+Tras este proyecto está **Futuramas del Code**, un equipo formado por [Alba San Martín](https://github.com/albasmg), [Ana López](https://github.com/Analo-pez), [Christina Lorenzo](https://github.com/Cristinalorenzomontes), [Sara Alite](https://github.com/saraalite) y [yo misma](https://www.linkedin.com/in/mariaozamiz/), ¡futuras **amas** del código!
 
 
 ## Instalación
