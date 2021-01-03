@@ -2,7 +2,7 @@
 
 Esta Web App inspirada en la serie de animación Futurama, crea tarjetas de visita personalizadas e interactivas para compartir en redes sociales.
 
-Tras este proyecto está **Futuramas del Code**, un equipo formado por [Alba San Martín](https://github.com/albasmg), [Ana López](https://github.com/Analo-pez), [Christina Lorenzo](https://github.com/Cristinalorenzomontes), [Sara Alite](https://github.com/saraalite) y [yo misma](https://www.linkedin.com/in/mariaozamiz/), ¡futuras **amas** del código!
+Tras este proyecto está **Futuramas del Code**, un equipo formado por [Alba San Martín](https://github.com/albasmg), [Ana López](https://github.com/Analo-pez), [Christina Lorenzo](https://github.com/Cristinalorenzomontes), [Sara Alite](https://github.com/saraalite) y [yo misma](https://www.linkedin.com/in/mariaozamiz/), ¡todas futuras **amas** del código!
 
 👉 En este **fork** quiero añadir una **nueva funcionalidad** al proyecto original: además de subir tu foto, ¡ahora también podrás sacarte una *selfie* en el momento! 📸 También estoy refactorizando algunas partes del código a medida que aprendo nuevas expresiones 🤓.
 
