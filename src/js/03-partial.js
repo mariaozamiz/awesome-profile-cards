@@ -39,6 +39,8 @@ function savePicture() {
   const height = video.videoHeight;
   canvas.width = width;
   canvas.height = height;
+  ctx.translate(width, 0);
+  ctx.scale(-1, 1);
   ctx.drawImage(video, 0, 0, width, height);
   const data = canvas.toDataURL('image/jpeg');
   profileImage.style.backgroundImage = `url(${data})`;
@@ -48,6 +50,10 @@ function savePicture() {
   cameraStream.getTracks()[0].stop();
   cameraStream = false;
 }
+
+// canvas.translate(width, 0);
+// canvas.scale(-1, 1);
+// this.canvasContext.drawImage(image, 0, 0);
 
 /**
  * Recoge el archivo añadido al campo de tipo "file"
